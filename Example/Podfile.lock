@@ -51,14 +51,14 @@ DEPENDENCIES:
   - SdkApp (from `../`)
 
 SPEC REPOS:
-  "https://descobedo:G0r569105@gitlabdev.paciolan.info/development/application/integration/mobile/msdk-example-specs.git":
+  https://github.com/cocoapods/specs.git:
+    - boost-for-react-native
+  "https://gitlab+deploy-token-3:uKaSsz4E1Xar-icLsuY4@gitlabdev.paciolan.info/development/application/integration/mobile/msdk-specs.git":
     - DoubleConversion
     - Folly
     - glog
     - React
     - yoga
-  https://github.com/cocoapods/specs.git:
-    - boost-for-react-native
 
 EXTERNAL SOURCES:
   SdkApp:
@@ -68,11 +68,11 @@ SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   DoubleConversion: 2ca14703beeb6b302b80c2e322b9a17934d105b5
   Folly: fa458a15230e6bee654f3e2b25f6be60f0b61bf3
-  glog: 6663635cfc86a4814a1c31388b4e3d5921ac0a5e
-  React: ff88dcb7ab4a3cb442102ece31d79775a8beb146
-  SdkApp: f88eb6751910eb04e5104f4c0bbdd974c6a0e248
+  glog: d4d3ed695a9089e790f0cfc7dbcc3bb57f8b11a6
+  React: adbac0757ce35e92fbd447ab98c810209d27d9b0
+  SdkApp: 964276603a84999b6fc7701a85a577950b13f77d
   yoga: dc7566617ace4ff6f328fa77d1b6945e883244bc
 
-PODFILE CHECKSUM: af9eba3d0c57074cf6e03ed156877688b6d2d4a6
+PODFILE CHECKSUM: 47b332933965ea7c0c08e8ddeccdc3bf7bb2f5f8
 
 COCOAPODS: 1.5.3
