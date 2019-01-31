@@ -1,0 +1,1 @@
+../../../React/Libraries/Text/TextInput/RCTInputAccessoryViewManager.h

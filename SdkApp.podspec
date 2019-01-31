@@ -1,42 +1,55 @@
-#
-# Be sure to run `pod lib lint SdkApp.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
+require 'json'
+
+# Returns the version number for a package.json file
+# pkg_version = lambda do |dir_from_root = '', version = 'version'|
+#   path = File.join(__dir__, dir_from_root, 'package.json')
+#   JSON.parse(File.read(path))[version]
+# end
+
+# Let the main package.json decide the version number for the pod
+sdkapp_version = '0.1.0' # pkg_version.call('../../sdksrc/')
+# Use the same RN version that the JS tools use
+react_native_version = '0.57.8' # pkg_version.call('../../sdksrc/node_modules/react-native')
 
 Pod::Spec.new do |s|
   s.name             = 'SdkApp'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SdkApp.'
+  s.version          = sdkapp_version
+  s.summary          = 'Example SdkApp Pod Component'
+  s.description      = 'This pod allows us to install the react native application into a native app.'
+  s.homepage         = 'https://gitlabdev.paciolan.info/development/application/integration/mobile/msdk-example-pod.git'
+  s.license          = { type: 'UNLICENSED' }
+  s.author           = { 'Daniel Escobedo' => 'descobedo@paciolan.com' }
+  s.source           = { git: 'https://descobedo:G0r569105@gitlabdev.paciolan.info/development/application/integration/mobile/msdk-example-pod.git', tag: s.version.to_s }
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.source_files   = 'Pod/Classes/**/*.{h,m}'
+  s.resources      = 'Pod/Assets/{SdkApp.js,assets}'
+  s.platform       = :ios, '9.0'
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  # React is split into a set of subspecs, these are the essentials
+  s.dependency 'React/Core', react_native_version
+  s.dependency 'React/CxxBridge', react_native_version
+  s.dependency 'React/RCTAnimation', react_native_version
+  s.dependency 'React/RCTImage', react_native_version
+  s.dependency 'React/RCTLinkingIOS', react_native_version
+  s.dependency 'React/RCTNetwork', react_native_version
+  s.dependency 'React/RCTText', react_native_version
 
-  s.homepage         = 'https://github.com/mrboomer/SdkApp'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'mrboomer' => 'descobedo@paciolan.com' }
-  s.source           = { :git => 'https://github.com/mrboomer/SdkApp.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  # React's Dependencies
+  s.dependency 'yoga', "#{react_native_version}.React"
+  react_podspecs = [
+    'dependencies/third-party-podspecs/DoubleConversion.podspec',
+    'dependencies/third-party-podspecs/Folly.podspec',
+    'dependencies/third-party-podspecs/glog.podspec'
+  ]
 
-  s.ios.deployment_target = '8.0'
+  # Native Dependencies
+  dep_podspecs = []
 
-  s.source_files = 'SdkApp/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'SdkApp' => ['SdkApp/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # Ties the exact versions so host apps don't need to guess the version
+  # or have a potential mismatch
+  podspecs = react_podspecs + dep_podspecs
+  podspecs.each do |podspec_path|
+    spec = Pod::Specification.from_file podspec_path
+    s.dependency spec.name, "#{spec.version}"
+  end
 end

@@ -1,13 +1,12 @@
-use_frameworks!
+platform :ios, '9.0'
 
-platform :ios, '8.0'
+source 'https://descobedo:G0r569105@gitlabdev.paciolan.info/development/application/integration/mobile/msdk-example-specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 target 'SdkApp_Example' do
   pod 'SdkApp', :path => '../'
 
   target 'SdkApp_Tests' do
     inherit! :search_paths
-
-    
   end
 end
