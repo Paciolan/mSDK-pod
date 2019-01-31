@@ -1,21 +1,21 @@
 require 'json'
 
-Returns the version number for a package.json file
+# Returns the version number for a package.json file
 pkg_version = lambda do |dir_from_root = '', version = 'version'|
   path = File.join(__dir__, dir_from_root, 'package.json')
   JSON.parse(File.read(path))[version]
 end
 
 # Let the main package.json decide the version number for the pod
-sdkapp_version = pkg_version.call
+sdkapp_version = pkg_version.call('../')
 # Use the same RN version that the JS tools use
-react_native_version = pkg_version.call('node_modules/react-native')
+react_native_version = pkg_version.call('../node_modules/react-native')
 
 Pod::Spec.new do |s|
   s.name             = 'SdkApp'
   s.version          = sdkapp_version
-  s.summary          = 'Example SdkApp Pod Component'
-  s.description      = 'This pod allows us to install the react native application into a native app.'
+  s.summary          = 'mSDK Pod Component'
+  s.description      = 'This pod allows us to install the react native mSDK application into a native app.'
   s.homepage         = 'https://gitlabdev.paciolan.info/development/application/integration/mobile/msdk-pod.git'
   s.license          = { type: 'No License' }
   s.author           = { 'Daniel Escobedo' => 'descobedo@paciolan.com' }
