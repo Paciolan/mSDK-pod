@@ -1,1 +1,0 @@
-../../../yoga/ReactCommon/yoga/yoga/YGConfig.h
