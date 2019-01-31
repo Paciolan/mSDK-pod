@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://gitlabdev.paciolan.info/development/application/integration/mobile/msdk-pod.git'
   s.license          = { type: 'No License' }
   s.author           = { 'Daniel Escobedo' => 'descobedo@paciolan.com' }
-  s.source           = { git: 'https://gitlab+deploy-token-3:uKaSsz4E1Xar-icLsuY4@gitlabdev.paciolan.info/development/application/integration/mobile/msdk-pod.git', tag: s.version.to_s }
+  s.source           = { git: 'https://gitlab+deploy-token-4:hKoiyi55BUhu-SZTxGs5@gitlabdev.paciolan.info/development/application/integration/mobile/msdk-pod.git', tag: s.version.to_s }
 
   s.source_files   = 'Pod/Classes/**/*.{h,m}'
   s.resources      = 'Pod/Assets/{SdkApp.js,assets}'
