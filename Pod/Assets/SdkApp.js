@@ -1371,7 +1371,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   _reactNative.AppRegistry.registerComponent(_app.name, function () {
     return _App.default;
   });
-},0,[1,2,389,432],"index.js");
+},0,[1,2,389,435],"index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -4177,7 +4177,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectWithoutProperties = _$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/objectWithoutProperties");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/ActivityIndicator/ActivityIndicator.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/ActivityIndicator/ActivityIndicator.js";
 
   var Platform = _$$_REQUIRE(_dependencyMap[3], "Platform");
 
@@ -8593,7 +8593,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _extends = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/extends");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/View/View.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/View/View.js";
 
   var React = _$$_REQUIRE(_dependencyMap[1], "React");
 
@@ -39039,7 +39039,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/UnimplementedViews/UnimplementedView.js";
 
   var React = _$$_REQUIRE(_dependencyMap[5], "React");
 
@@ -39097,7 +39097,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/ART/ReactNativeART.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/ART/ReactNativeART.js";
 
   var Color = _$$_REQUIRE(_dependencyMap[5], "art/core/color");
 
@@ -40681,7 +40681,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/Button.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/Button.js";
 
   var ColorPropType = _$$_REQUIRE(_dependencyMap[5], "ColorPropType");
 
@@ -40850,7 +40850,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[7], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Text/Text.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Text/Text.js";
 
   var React = _$$_REQUIRE(_dependencyMap[8], "React");
 
@@ -41271,7 +41271,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/Touchable/Touchable.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/Touchable/Touchable.js";
 
   var BoundingDimensions = _$$_REQUIRE(_dependencyMap[1], "BoundingDimensions");
 
@@ -41964,7 +41964,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/Touchable/TouchableNativeFeedback.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/Touchable/TouchableNativeFeedback.ios.js";
 
   var React = _$$_REQUIRE(_dependencyMap[5], "React");
 
@@ -42044,7 +42044,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/Touchable/TouchableOpacity.js";
 
   var Animated = _$$_REQUIRE(_dependencyMap[1], "Animated");
 
@@ -46265,7 +46265,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _assertThisInitialized = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/assertThisInitialized");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Animated/src/createAnimatedComponent.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Animated/src/createAnimatedComponent.js";
 
   var _require = _$$_REQUIRE(_dependencyMap[7], "./AnimatedEvent"),
       AnimatedEvent = _require.AnimatedEvent;
@@ -46463,7 +46463,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Lists/FlatList.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Lists/FlatList.js";
 
   var MetroListView = _$$_REQUIRE(_dependencyMap[7], "MetroListView");
 
@@ -46792,7 +46792,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Lists/MetroListView.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Lists/MetroListView.js";
 
   var ListView = _$$_REQUIRE(_dependencyMap[6], "ListView");
 
@@ -47017,7 +47017,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _extends = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/extends");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Lists/ListView/ListView.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Lists/ListView/ListView.js";
 
   var InternalListViewType = _$$_REQUIRE(_dependencyMap[2], "InternalListViewType");
 
@@ -47839,7 +47839,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/ScrollView/ScrollView.js";
 
   var AnimatedImplementation = _$$_REQUIRE(_dependencyMap[2], "AnimatedImplementation");
 
@@ -48715,7 +48715,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/ScrollView/ScrollViewStickyHeader.js";
 
   var AnimatedImplementation = _$$_REQUIRE(_dependencyMap[5], "AnimatedImplementation");
 
@@ -49595,7 +49595,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/RefreshControl/RefreshControl.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/RefreshControl/RefreshControl.js";
 
   var Platform = _$$_REQUIRE(_dependencyMap[6], "Platform");
 
@@ -49712,7 +49712,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _assertThisInitialized = _$$_REQUIRE(_dependencyMap[8], "@babel/runtime/helpers/assertThisInitialized");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Lists/VirtualizedList.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Lists/VirtualizedList.js";
 
   var Batchinator = _$$_REQUIRE(_dependencyMap[9], "Batchinator");
 
@@ -51917,7 +51917,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _extends = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/extends");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Image/Image.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Image/Image.ios.js";
 
   var ImageProps = _$$_REQUIRE(_dependencyMap[1], "ImageProps");
 
@@ -52085,7 +52085,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Lists/SectionList.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Lists/SectionList.js";
 
   var MetroListView = _$$_REQUIRE(_dependencyMap[7], "MetroListView");
 
@@ -52209,7 +52209,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _assertThisInitialized = _$$_REQUIRE(_dependencyMap[7], "@babel/runtime/helpers/assertThisInitialized");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js";
 
   var React = _$$_REQUIRE(_dependencyMap[8], "React");
 
@@ -52903,7 +52903,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/DatePicker/DatePickerIOS.ios.js";
 
   var React = _$$_REQUIRE(_dependencyMap[5], "React");
 
@@ -53031,7 +53031,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Image/ImageBackground.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Image/ImageBackground.js";
 
   var Image = _$$_REQUIRE(_dependencyMap[7], "Image");
 
@@ -53213,7 +53213,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/TextInput/InputAccessoryView.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/TextInput/InputAccessoryView.js";
 
   var ColorPropType = _$$_REQUIRE(_dependencyMap[5], "ColorPropType");
 
@@ -53375,7 +53375,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/Keyboard/KeyboardAvoidingView.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/Keyboard/KeyboardAvoidingView.js";
 
   var Keyboard = _$$_REQUIRE(_dependencyMap[7], "Keyboard");
 
@@ -53599,7 +53599,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[7], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/MaskedView/MaskedViewIOS.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/MaskedView/MaskedViewIOS.ios.js";
 
   var PropTypes = _$$_REQUIRE(_dependencyMap[8], "prop-types");
 
@@ -53697,7 +53697,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Modal/Modal.js",
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Modal/Modal.js",
       _container;
 
   var AppContainer = _$$_REQUIRE(_dependencyMap[6], "AppContainer");
@@ -53899,7 +53899,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/ReactNative/AppContainer.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/ReactNative/AppContainer.js";
 
   var EmitterSubscription = _$$_REQUIRE(_dependencyMap[5], "EmitterSubscription");
 
@@ -54076,7 +54076,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Inspector/Inspector.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Inspector/Inspector.js";
 
   var Dimensions = _$$_REQUIRE(_dependencyMap[5], "Dimensions");
 
@@ -54405,7 +54405,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Inspector/InspectorOverlay.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Inspector/InspectorOverlay.js";
 
   var Dimensions = _$$_REQUIRE(_dependencyMap[5], "Dimensions");
 
@@ -54527,7 +54527,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Inspector/ElementBox.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Inspector/ElementBox.js";
 
   var BorderBox = _$$_REQUIRE(_dependencyMap[6], "BorderBox");
 
@@ -54655,7 +54655,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Inspector/BorderBox.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Inspector/BorderBox.js";
 
   var React = _$$_REQUIRE(_dependencyMap[5], "React");
 
@@ -54824,7 +54824,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Inspector/InspectorPanel.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Inspector/InspectorPanel.js";
 
   var ElementProperties = _$$_REQUIRE(_dependencyMap[5], "ElementProperties");
 
@@ -55074,7 +55074,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Inspector/ElementProperties.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Inspector/ElementProperties.js";
 
   var BoxInspector = _$$_REQUIRE(_dependencyMap[5], "BoxInspector");
 
@@ -55290,7 +55290,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Inspector/BoxInspector.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Inspector/BoxInspector.js";
 
   var React = _$$_REQUIRE(_dependencyMap[5], "React");
 
@@ -55488,7 +55488,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Inspector/StyleInspector.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Inspector/StyleInspector.js";
 
   var React = _$$_REQUIRE(_dependencyMap[5], "React");
 
@@ -55595,7 +55595,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/Touchable/TouchableHighlight.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/Touchable/TouchableHighlight.js";
 
   var ColorPropType = _$$_REQUIRE(_dependencyMap[1], "ColorPropType");
 
@@ -55849,7 +55849,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _assertThisInitialized = _$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/assertThisInitialized");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Inspector/NetworkOverlay.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Inspector/NetworkOverlay.js";
 
   var ListView = _$$_REQUIRE(_dependencyMap[6], "ListView");
 
@@ -56816,7 +56816,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Inspector/PerformanceOverlay.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Inspector/PerformanceOverlay.js";
 
   var PerformanceLogger = _$$_REQUIRE(_dependencyMap[5], "PerformanceLogger");
 
@@ -56917,7 +56917,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/YellowBox/YellowBox.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/YellowBox/YellowBox.js";
 
   var React = _$$_REQUIRE(_dependencyMap[5], "React");
 
@@ -57121,7 +57121,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxList.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxList.js";
 
   var Dimensions = _$$_REQUIRE(_dependencyMap[7], "Dimensions");
 
@@ -57346,7 +57346,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/SafeAreaView/SafeAreaView.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/SafeAreaView/SafeAreaView.ios.js";
 
   var React = _$$_REQUIRE(_dependencyMap[7], "React");
 
@@ -57388,7 +57388,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxButton.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxButton.js";
 
   var React = _$$_REQUIRE(_dependencyMap[0], "React");
 
@@ -57448,7 +57448,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxPressable.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxPressable.js";
 
   var React = _$$_REQUIRE(_dependencyMap[5], "React");
 
@@ -57562,7 +57562,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxInspector.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxInspector.js";
 
   var Platform = _$$_REQUIRE(_dependencyMap[5], "Platform");
 
@@ -57811,7 +57811,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _toConsumableArray = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/toConsumableArray");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/YellowBox/Data/YellowBoxCategory.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/YellowBox/Data/YellowBoxCategory.js";
 
   var React = _$$_REQUIRE(_dependencyMap[1], "React");
 
@@ -57964,7 +57964,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxInspectorFooter.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxInspectorFooter.js";
 
   var React = _$$_REQUIRE(_dependencyMap[0], "React");
 
@@ -58071,7 +58071,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxInspectorHeader.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxInspectorHeader.js";
 
   var Platform = _$$_REQUIRE(_dependencyMap[0], "Platform");
 
@@ -58213,7 +58213,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxInspectorSourceMapStatus.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxInspectorSourceMapStatus.js";
 
   var Animated = _$$_REQUIRE(_dependencyMap[5], "Animated");
 
@@ -58411,7 +58411,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxInspectorStackFrame.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxInspectorStackFrame.js";
 
   var React = _$$_REQUIRE(_dependencyMap[0], "React");
 
@@ -58496,7 +58496,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxListRow.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/YellowBox/UI/YellowBoxListRow.js";
 
   var React = _$$_REQUIRE(_dependencyMap[5], "React");
 
@@ -59007,7 +59007,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/Navigation/NavigatorIOS.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/Navigation/NavigatorIOS.ios.js";
 
   var EventEmitter = _$$_REQUIRE(_dependencyMap[7], "EventEmitter");
 
@@ -59524,7 +59524,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/Picker/Picker.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/Picker/Picker.js";
 
   var ColorPropType = _$$_REQUIRE(_dependencyMap[7], "ColorPropType");
 
@@ -59652,7 +59652,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/Picker/PickerIOS.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/Picker/PickerIOS.ios.js";
 
   var React = _$$_REQUIRE(_dependencyMap[5], "React");
 
@@ -59789,7 +59789,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/ProgressViewIOS/ProgressViewIOS.ios.js";
 
   var Image = _$$_REQUIRE(_dependencyMap[2], "Image");
 
@@ -59845,7 +59845,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/SegmentedControlIOS/SegmentedControlIOS.ios.js";
 
   var NativeMethodsMixin = _$$_REQUIRE(_dependencyMap[2], "NativeMethodsMixin");
 
@@ -59911,7 +59911,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _extends = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/extends");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/Slider/Slider.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/Slider/Slider.js";
 
   var ReactNative = _$$_REQUIRE(_dependencyMap[1], "ReactNative");
 
@@ -60005,7 +60005,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/RCTTest/SnapshotViewIOS.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/RCTTest/SnapshotViewIOS.ios.js";
 
   var React = _$$_REQUIRE(_dependencyMap[7], "React");
 
@@ -60098,7 +60098,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/Switch/Switch.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/Switch/Switch.js";
 
   var SwitchNativeComponent = _$$_REQUIRE(_dependencyMap[7], "SwitchNativeComponent");
 
@@ -60527,7 +60527,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableFlatList.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableFlatList.js";
 
   var PropTypes = _$$_REQUIRE(_dependencyMap[7], "prop-types");
 
@@ -60693,7 +60693,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _extends = _$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/extends");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableRow.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableRow.js";
 
   var Animated = _$$_REQUIRE(_dependencyMap[6], "Animated");
 
@@ -61211,7 +61211,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableListView.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Experimental/SwipeableRow/SwipeableListView.js";
 
   var ListView = _$$_REQUIRE(_dependencyMap[6], "ListView");
 
@@ -61493,7 +61493,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarIOS.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarIOS.ios.js";
 
   var ColorPropType = _$$_REQUIRE(_dependencyMap[6], "ColorPropType");
 
@@ -61580,7 +61580,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[7], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarItemIOS.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/TabBarIOS/TabBarItemIOS.ios.js";
 
   var ColorPropType = _$$_REQUIRE(_dependencyMap[8], "ColorPropType");
 
@@ -61719,7 +61719,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _objectSpread = _$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/objectSpread");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/TextInput/TextInput.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/TextInput/TextInput.js";
 
   var ColorPropType = _$$_REQUIRE(_dependencyMap[7], "ColorPropType");
 
@@ -62793,7 +62793,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _inherits = _$$_REQUIRE(_dependencyMap[7], "@babel/runtime/helpers/inherits");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/Components/WebView/WebView.ios.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/Components/WebView/WebView.ios.js";
 
   var ActivityIndicator = _$$_REQUIRE(_dependencyMap[8], "ActivityIndicator");
 
@@ -63719,7 +63719,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _extends = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/extends");
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/ReactNative/renderApplication.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/ReactNative/renderApplication.js";
 
   var AppContainer = _$$_REQUIRE(_dependencyMap[1], "AppContainer");
 
@@ -63775,7 +63775,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   'use strict';
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/node_modules/react-native/Libraries/ReactNative/ReactFabricIndicator.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native/Libraries/ReactNative/ReactFabricIndicator.js";
 
   var React = _$$_REQUIRE(_dependencyMap[0], "React");
 
@@ -81415,34 +81415,41 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "./styles"));
 
-  var _Demo = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "../../view/Demo"));
+  var _QuantityPricing = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "../../view/QuantityPricing"));
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/src/components/container/App/index.js";
+  var _Demo = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "../../view/Demo"));
+
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/src/components/container/App/index.js";
 
   var App = function App() {
     return _react.default.createElement(_reactRedux.Provider, {
       store: _store.default,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 15
       }
     }, _react.default.createElement(_reactNative.View, {
       style: _styles.default.container,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 16
       }
-    }, _react.default.createElement(_Demo.default, {
+    }, _react.default.createElement(_QuantityPricing.default, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 17
+      }
+    }), _react.default.createElement(_Demo.default, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
       }
     })));
   };
 
   var _default = App;
   exports.default = _default;
-},389,[1,53,2,390,415,420,421],"src/components/container/App/index.js");
+},389,[1,53,2,390,415,422,423,424],"src/components/container/App/index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   "use strict";
 
@@ -83302,8 +83309,11 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reducer = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "../components/container/App/module/reducer"));
 
+  var _reducer2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "../components/view/QuantityPricing/module/reducer"));
+
   var initialReducers = {
-    app: _reducer.default
+    app: _reducer.default,
+    quantityPricing: _reducer2.default
   };
 
   function createReducer() {
@@ -83319,7 +83329,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     var rootReducer = (0, _redux.combineReducers)((0, _objectSpread2.default)({}, initialReducers, injectedReducers));
     return rootReducer;
   }
-},417,[1,49,404,418],"src/store/reducers.js");
+},417,[1,49,404,418,420],"src/store/reducers.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -83358,6 +83368,43 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   exports.default = _default;
 },419,[],"src/components/container/App/module/state.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _objectWithoutProperties2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/objectWithoutProperties"));
+
+  var _state = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "./state"));
+
+  var reducer = function reducer() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _state.default;
+
+    var _ref = arguments.length > 1 ? arguments[1] : undefined,
+        type = _ref.type,
+        action = (0, _objectWithoutProperties2.default)(_ref, ["type"]);
+
+    switch (type) {
+      default:
+        return state;
+    }
+  };
+
+  var _default = reducer;
+  exports.default = _default;
+},420,[1,6,421],"src/components/view/QuantityPricing/module/reducer.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+  var initialState = {};
+  var _default = initialState;
+  exports.default = _default;
+},421,[],"src/components/view/QuantityPricing/module/state.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
@@ -83369,7 +83416,89 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _default = styles;
   exports.default = _default;
-},420,[2],"src/components/container/App/styles.js");
+},422,[2],"src/components/container/App/styles.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
+  var _interopRequireWildcard = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/interopRequireWildcard");
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = exports.QuantityPricing = void 0;
+
+  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/classCallCheck"));
+
+  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "@babel/runtime/helpers/createClass"));
+
+  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/possibleConstructorReturn"));
+
+  var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/getPrototypeOf"));
+
+  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits"));
+
+  var _react = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[7], "react"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[8], "react-native");
+
+  var _propTypes = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[9], "prop-types"));
+
+  var _reactRedux = _$$_REQUIRE(_dependencyMap[10], "react-redux");
+
+  var _redux = _$$_REQUIRE(_dependencyMap[11], "redux");
+
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/src/components/view/QuantityPricing/index.js";
+
+  var QuantityPricing = function (_PureComponent) {
+    (0, _inherits2.default)(QuantityPricing, _PureComponent);
+
+    function QuantityPricing() {
+      (0, _classCallCheck2.default)(this, QuantityPricing);
+      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(QuantityPricing).apply(this, arguments));
+    }
+
+    (0, _createClass2.default)(QuantityPricing, [{
+      key: "render",
+      value: function render() {
+        return _react.default.createElement(_reactNative.View, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 15
+          }
+        }, _react.default.createElement(_reactNative.Text, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16
+          }
+        }, "QuantityPricing Container"));
+      }
+    }]);
+    return QuantityPricing;
+  }(_react.PureComponent);
+
+  exports.QuantityPricing = QuantityPricing;
+  QuantityPricing.propTypes = {
+    dispatch: _propTypes.default.func.isRequired
+  };
+
+  var mapStateToProps = function mapStateToProps(state) {
+    return {
+      state: state
+    };
+  };
+
+  var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+    return {
+      dispatch: dispatch
+    };
+  };
+
+  var withConnect = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps);
+
+  var _default = (0, _redux.compose)(withConnect)(QuantityPricing);
+
+  exports.default = _default;
+},423,[1,392,19,20,35,38,41,53,2,70,390,404],"src/components/view/QuantityPricing/index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -83406,7 +83535,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reducer = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[14], "./module/reducer"));
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/src/components/view/Demo/index.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/src/components/view/Demo/index.js";
 
   var Demo = function (_Component) {
     (0, _inherits2.default)(Demo, _Component);
@@ -83557,7 +83686,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _default = (0, _redux.compose)(withReducer, withConnect)(Demo);
 
   exports.default = _default;
-},421,[1,392,19,20,35,38,41,53,2,70,390,404,422,427,430],"src/components/view/Demo/index.js");
+},424,[1,392,19,20,35,38,41,53,2,70,390,404,425,430,433],"src/components/view/Demo/index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -83588,7 +83717,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reducerInjectors = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11], "./reducerInjectors"));
 
-  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdk-integrations/sdksrc/src/helpers/utils/injectReducer.js";
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/src/helpers/utils/injectReducer.js";
 
   var ReducerInjector = function (_Component) {
     (0, _inherits2.default)(ReducerInjector, _Component);
@@ -83664,7 +83793,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
 
   exports.default = _default;
-},422,[1,392,8,19,20,35,38,41,53,390,396,423],"src/helpers/utils/injectReducer.js");
+},425,[1,392,8,19,20,35,38,41,53,390,396,426],"src/helpers/utils/injectReducer.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -83700,7 +83829,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       injectReducer: injectReducerFactory(store, true)
     };
   }
-},423,[1,400,424,425,426,417],"src/helpers/utils/reducerInjectors.js");
+},426,[1,400,427,428,429,417],"src/helpers/utils/reducerInjectors.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   /**
    * @license
@@ -90881,7 +91010,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
         root._ = _;
       }
   }).call(this);
-},424,[],"node_modules/lodash/lodash.js");
+},427,[],"node_modules/lodash/lodash.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   (function (global) {
     "use strict";
@@ -92441,7 +92570,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       });
     }
   })(typeof exports !== 'undefined' ? global : this);
-},425,[],"node_modules/harmony-reflect/reflect.js");
+},428,[],"node_modules/harmony-reflect/reflect.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -92464,7 +92593,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     };
     (0, _invariant.default)((0, _lodash.conformsTo)(store, shape), "(src/helpers/utils...) injectors: Expected a valid redux store");
   }
-},426,[1,424,400],"src/helpers/utils/checkStore.js");
+},429,[1,427,400],"src/helpers/utils/checkStore.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -92547,7 +92676,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   var _default = actions;
   exports.default = _default;
-},427,[1,103,428,429],"src/components/view/Demo/module/actions.js");
+},430,[1,103,431,432],"src/components/view/Demo/module/actions.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -92565,7 +92694,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     FAILURE: "GET_REDDIT_POSTS_FAILURE"
   };
   exports.GET_REDDIT_POSTS = GET_REDDIT_POSTS;
-},428,[],"src/components/view/Demo/module/constants.js");
+},431,[],"src/components/view/Demo/module/constants.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -92584,7 +92713,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
 
   exports.fetchRedditPosts = fetchRedditPosts;
-},429,[],"src/components/view/Demo/module/side-effects.js");
+},432,[],"src/components/view/Demo/module/side-effects.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -92631,7 +92760,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _default = reducer;
   exports.default = _default;
-},430,[1,49,6,431,428],"src/components/view/Demo/module/reducer.js");
+},433,[1,49,6,434,431],"src/components/view/Demo/module/reducer.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -92647,13 +92776,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   var _default = initialState;
   exports.default = _default;
-},431,[],"src/components/view/Demo/module/state.js");
+},434,[],"src/components/view/Demo/module/state.js");
 __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   module.exports = {
   "name": "SdkApp",
   "displayName": "sdkapp"
 }
 ;
-},432,[],"app.json");
+},435,[],"app.json");
 __r(90);
 __r(0);
