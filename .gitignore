@@ -35,6 +35,3 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 Pods/
-
-# Podspec JSON
-SdkApp.podspec.json
