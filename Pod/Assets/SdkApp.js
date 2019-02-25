@@ -83430,7 +83430,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNativeCodePush = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "react-native-code-push"));
 
+  var deploymentKey = "uPVI6pGwsfoDuvtDsW9Nowbdtyqy4ac28013-8b5f-417a-ae75-8591e4b3b579";
   var codePushOptions = {
+    deploymentKey: deploymentKey,
     checkFrequency: _reactNativeCodePush.default.CheckFrequency.ON_APP_RESUME,
     installMode: _reactNativeCodePush.default.InstallMode.ON_NEXT_RESUME,
     updateDialog: true

@@ -48,9 +48,6 @@ Pod::Spec.new do |s|
     '../node_modules/react-native-code-push/CodePush.podspec',
   ]
 
-  # Add CodePush Key to Info.plist
-  s.prepare_command = File.read("./scripts/codepush.sh")
-
   # Ties the exact versions so host apps don't need to guess the version
   # or have a potential mismatch
   podspecs = react_podspecs + dep_podspecs

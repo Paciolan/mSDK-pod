@@ -27,7 +27,6 @@
     #if DEBUG
         NSBundle *sdkAppBundle = [NSBundle bundleForClass:SdkAppViewController.class];
         return [sdkAppBundle URLForResource:@"SdkApp" withExtension:@"js"];
-        // return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
     #else
         return [CodePush bundleURL];
     #endif
