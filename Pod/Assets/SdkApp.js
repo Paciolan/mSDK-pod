@@ -1371,7 +1371,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   _reactNative.AppRegistry.registerComponent(_app.name, function () {
     return _App.default;
   });
-},0,[1,2,389,435],"index.js");
+},0,[1,2,389,445],"index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -81415,9 +81415,11 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _styles = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "./styles"));
 
-  var _QuantityPricing = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "../../view/QuantityPricing"));
+  var _codePush = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "../../../helpers/services/codePush"));
 
-  var _Demo = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "../../view/Demo"));
+  var _QuantityPricing = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "../../view/QuantityPricing"));
+
+  var _Demo = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "../../view/Demo"));
 
   var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/src/components/container/App/index.js";
 
@@ -81426,30 +81428,31 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       store: _store.default,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 19
       }
     }, _react.default.createElement(_reactNative.View, {
       style: _styles.default.container,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 20
       }
     }, _react.default.createElement(_QuantityPricing.default, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 21
       }
     }), _react.default.createElement(_Demo.default, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18
+        lineNumber: 22
       }
     })));
   };
 
-  var _default = App;
+  var _default = (0, _codePush.default)(App);
+
   exports.default = _default;
-},389,[1,53,2,390,415,422,423,424],"src/components/container/App/index.js");
+},389,[1,53,2,390,415,422,423,433,434],"src/components/container/App/index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   "use strict";
 
@@ -83420,6 +83423,1730 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _reactNativeCodePush = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "react-native-code-push"));
+
+  var codePushOptions = {
+    checkFrequency: _reactNativeCodePush.default.CheckFrequency.ON_APP_RESUME,
+    installMode: _reactNativeCodePush.default.InstallMode.ON_NEXT_RESUME,
+    updateDialog: true
+  };
+
+  var _default = (0, _reactNativeCodePush.default)(codePushOptions);
+
+  exports.default = _default;
+},423,[1,424],"src/helpers/services/codePush.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
+  var _extends2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/extends"));
+
+  var _classCallCheck2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/classCallCheck"));
+
+  var _createClass2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "@babel/runtime/helpers/createClass"));
+
+  var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/possibleConstructorReturn"));
+
+  var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/getPrototypeOf"));
+
+  var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits"));
+
+  var _regenerator = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[7], "@babel/runtime/regenerator"));
+
+  var _objectSpread2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[8], "@babel/runtime/helpers/objectSpread"));
+
+  var _acquisitionSdk = _$$_REQUIRE(_dependencyMap[9], "code-push/script/acquisition-sdk");
+
+  var _AlertAdapter = _$$_REQUIRE(_dependencyMap[10], "./AlertAdapter");
+
+  var _requestFetchAdapter = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11], "./request-fetch-adapter"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[12], "react-native");
+
+  var _RestartManager = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[13], "./RestartManager"));
+
+  var _logging = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[14], "./logging"));
+
+  var _hoistNonReactStatics = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[15], "hoist-non-react-statics"));
+
+  var _jsxFileName = "/Users/descobedo/Development/Internal/SDK/sdkapp/node_modules/react-native-code-push/CodePush.js";
+
+  var NativeCodePush = _$$_REQUIRE(_dependencyMap[12], "react-native").NativeModules.CodePush;
+
+  var PackageMixins = _$$_REQUIRE(_dependencyMap[16], "./package-mixins")(NativeCodePush);
+
+  function checkForUpdate() {
+    var deploymentKey,
+        handleBinaryVersionMismatchCallback,
+        nativeConfig,
+        config,
+        sdk,
+        localPackage,
+        queryPackage,
+        update,
+        remotePackage,
+        _args = arguments;
+    return _regenerator.default.async(function checkForUpdate$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            deploymentKey = _args.length > 0 && _args[0] !== undefined ? _args[0] : null;
+            handleBinaryVersionMismatchCallback = _args.length > 1 && _args[1] !== undefined ? _args[1] : null;
+            _context.next = 4;
+            return _regenerator.default.awrap(getConfiguration());
+
+          case 4:
+            nativeConfig = _context.sent;
+            config = deploymentKey ? (0, _objectSpread2.default)({}, nativeConfig, {
+              deploymentKey: deploymentKey
+            }) : nativeConfig;
+            sdk = getPromisifiedSdk(_requestFetchAdapter.default, config);
+            _context.next = 9;
+            return _regenerator.default.awrap(module.exports.getCurrentPackage());
+
+          case 9:
+            localPackage = _context.sent;
+
+            if (localPackage) {
+              queryPackage = localPackage;
+            } else {
+              queryPackage = {
+                appVersion: config.appVersion
+              };
+
+              if (_reactNative.Platform.OS === "ios" && config.packageHash) {
+                queryPackage.packageHash = config.packageHash;
+              }
+            }
+
+            _context.next = 13;
+            return _regenerator.default.awrap(sdk.queryUpdateWithCurrentPackage(queryPackage));
+
+          case 13:
+            update = _context.sent;
+
+            if (!(!update || update.updateAppVersion || localPackage && update.packageHash === localPackage.packageHash || (!localPackage || localPackage._isDebugOnly) && config.packageHash === update.packageHash)) {
+              _context.next = 19;
+              break;
+            }
+
+            if (update && update.updateAppVersion) {
+              (0, _logging.default)("An update is available but it is not targeting the binary version of your app.");
+
+              if (handleBinaryVersionMismatchCallback && typeof handleBinaryVersionMismatchCallback === "function") {
+                handleBinaryVersionMismatchCallback(update);
+              }
+            }
+
+            return _context.abrupt("return", null);
+
+          case 19:
+            remotePackage = (0, _objectSpread2.default)({}, update, PackageMixins.remote(sdk.reportStatusDownload));
+            _context.next = 22;
+            return _regenerator.default.awrap(NativeCodePush.isFailedUpdate(remotePackage.packageHash));
+
+          case 22:
+            remotePackage.failedInstall = _context.sent;
+            remotePackage.deploymentKey = deploymentKey || nativeConfig.deploymentKey;
+            return _context.abrupt("return", remotePackage);
+
+          case 25:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, null, this);
+  }
+
+  var getConfiguration = function () {
+    var config;
+    return function getConfiguration() {
+      return _regenerator.default.async(function getConfiguration$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              if (!config) {
+                _context2.next = 4;
+                break;
+              }
+
+              return _context2.abrupt("return", config);
+
+            case 4:
+              if (!testConfig) {
+                _context2.next = 8;
+                break;
+              }
+
+              return _context2.abrupt("return", testConfig);
+
+            case 8:
+              _context2.next = 10;
+              return _regenerator.default.awrap(NativeCodePush.getConfiguration());
+
+            case 10:
+              config = _context2.sent;
+              return _context2.abrupt("return", config);
+
+            case 12:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, null, this);
+    };
+  }();
+
+  function getCurrentPackage() {
+    return _regenerator.default.async(function getCurrentPackage$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.next = 2;
+            return _regenerator.default.awrap(getUpdateMetadata(CodePush.UpdateState.LATEST));
+
+          case 2:
+            return _context3.abrupt("return", _context3.sent);
+
+          case 3:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, null, this);
+  }
+
+  function getUpdateMetadata(updateState) {
+    var updateMetadata;
+    return _regenerator.default.async(function getUpdateMetadata$(_context4) {
+      while (1) {
+        switch (_context4.prev = _context4.next) {
+          case 0:
+            _context4.next = 2;
+            return _regenerator.default.awrap(NativeCodePush.getUpdateMetadata(updateState || CodePush.UpdateState.RUNNING));
+
+          case 2:
+            updateMetadata = _context4.sent;
+
+            if (!updateMetadata) {
+              _context4.next = 11;
+              break;
+            }
+
+            updateMetadata = (0, _objectSpread2.default)({}, PackageMixins.local, updateMetadata);
+            _context4.next = 7;
+            return _regenerator.default.awrap(NativeCodePush.isFailedUpdate(updateMetadata.packageHash));
+
+          case 7:
+            updateMetadata.failedInstall = _context4.sent;
+            _context4.next = 10;
+            return _regenerator.default.awrap(NativeCodePush.isFirstRun(updateMetadata.packageHash));
+
+          case 10:
+            updateMetadata.isFirstRun = _context4.sent;
+
+          case 11:
+            return _context4.abrupt("return", updateMetadata);
+
+          case 12:
+          case "end":
+            return _context4.stop();
+        }
+      }
+    }, null, this);
+  }
+
+  function getPromisifiedSdk(requestFetchAdapter, config) {
+    var sdk = new module.exports.AcquisitionSdk(requestFetchAdapter, config);
+
+    sdk.queryUpdateWithCurrentPackage = function (queryPackage) {
+      return new Promise(function (resolve, reject) {
+        module.exports.AcquisitionSdk.prototype.queryUpdateWithCurrentPackage.call(sdk, queryPackage, function (err, update) {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(update);
+          }
+        });
+      });
+    };
+
+    sdk.reportStatusDeploy = function (deployedPackage, status, previousLabelOrAppVersion, previousDeploymentKey) {
+      return new Promise(function (resolve, reject) {
+        module.exports.AcquisitionSdk.prototype.reportStatusDeploy.call(sdk, deployedPackage, status, previousLabelOrAppVersion, previousDeploymentKey, function (err) {
+          if (err) {
+            reject(err);
+          } else {
+            resolve();
+          }
+        });
+      });
+    };
+
+    sdk.reportStatusDownload = function (downloadedPackage) {
+      return new Promise(function (resolve, reject) {
+        module.exports.AcquisitionSdk.prototype.reportStatusDownload.call(sdk, downloadedPackage, function (err) {
+          if (err) {
+            reject(err);
+          } else {
+            resolve();
+          }
+        });
+      });
+    };
+
+    return sdk;
+  }
+
+  var notifyApplicationReady = function () {
+    var notifyApplicationReadyPromise;
+    return function () {
+      if (!notifyApplicationReadyPromise) {
+        notifyApplicationReadyPromise = notifyApplicationReadyInternal();
+      }
+
+      return notifyApplicationReadyPromise;
+    };
+  }();
+
+  function notifyApplicationReadyInternal() {
+    var statusReport;
+    return _regenerator.default.async(function notifyApplicationReadyInternal$(_context5) {
+      while (1) {
+        switch (_context5.prev = _context5.next) {
+          case 0:
+            _context5.next = 2;
+            return _regenerator.default.awrap(NativeCodePush.notifyApplicationReady());
+
+          case 2:
+            _context5.next = 4;
+            return _regenerator.default.awrap(NativeCodePush.getNewStatusReport());
+
+          case 4:
+            statusReport = _context5.sent;
+            statusReport && tryReportStatus(statusReport);
+            return _context5.abrupt("return", statusReport);
+
+          case 7:
+          case "end":
+            return _context5.stop();
+        }
+      }
+    }, null, this);
+  }
+
+  function tryReportStatus(statusReport, _resumeListener) {
+    var config, previousLabelOrAppVersion, previousDeploymentKey, sdk, label, _sdk;
+
+    return _regenerator.default.async(function tryReportStatus$(_context7) {
+      while (1) {
+        switch (_context7.prev = _context7.next) {
+          case 0:
+            _context7.next = 2;
+            return _regenerator.default.awrap(getConfiguration());
+
+          case 2:
+            config = _context7.sent;
+            previousLabelOrAppVersion = statusReport.previousLabelOrAppVersion;
+            previousDeploymentKey = statusReport.previousDeploymentKey || config.deploymentKey;
+            _context7.prev = 5;
+
+            if (!statusReport.appVersion) {
+              _context7.next = 13;
+              break;
+            }
+
+            (0, _logging.default)("Reporting binary update (" + statusReport.appVersion + ")");
+            sdk = getPromisifiedSdk(_requestFetchAdapter.default, config);
+            _context7.next = 11;
+            return _regenerator.default.awrap(sdk.reportStatusDeploy(null, null, previousLabelOrAppVersion, previousDeploymentKey));
+
+          case 11:
+            _context7.next = 25;
+            break;
+
+          case 13:
+            label = statusReport.package.label;
+
+            if (!(statusReport.status === "DeploymentSucceeded")) {
+              _context7.next = 18;
+              break;
+            }
+
+            (0, _logging.default)("Reporting CodePush update success (" + label + ")");
+            _context7.next = 21;
+            break;
+
+          case 18:
+            (0, _logging.default)("Reporting CodePush update rollback (" + label + ")");
+            _context7.next = 21;
+            return _regenerator.default.awrap(NativeCodePush.setLatestRollbackInfo(statusReport.package.packageHash));
+
+          case 21:
+            config.deploymentKey = statusReport.package.deploymentKey;
+            _sdk = getPromisifiedSdk(_requestFetchAdapter.default, config);
+            _context7.next = 25;
+            return _regenerator.default.awrap(_sdk.reportStatusDeploy(statusReport.package, statusReport.status, previousLabelOrAppVersion, previousDeploymentKey));
+
+          case 25:
+            NativeCodePush.recordStatusReported(statusReport);
+            _resumeListener && _reactNative.AppState.removeEventListener("change", _resumeListener);
+            _context7.next = 34;
+            break;
+
+          case 29:
+            _context7.prev = 29;
+            _context7.t0 = _context7["catch"](5);
+            (0, _logging.default)("Report status failed: " + JSON.stringify(statusReport));
+            NativeCodePush.saveStatusReportForRetry(statusReport);
+
+            if (!_resumeListener) {
+              _resumeListener = function resumeListener(newState) {
+                var refreshedStatusReport;
+                return _regenerator.default.async(function resumeListener$(_context6) {
+                  while (1) {
+                    switch (_context6.prev = _context6.next) {
+                      case 0:
+                        if (!(newState !== "active")) {
+                          _context6.next = 2;
+                          break;
+                        }
+
+                        return _context6.abrupt("return");
+
+                      case 2:
+                        _context6.next = 4;
+                        return _regenerator.default.awrap(NativeCodePush.getNewStatusReport());
+
+                      case 4:
+                        refreshedStatusReport = _context6.sent;
+
+                        if (refreshedStatusReport) {
+                          tryReportStatus(refreshedStatusReport, _resumeListener);
+                        } else {
+                          _reactNative.AppState.removeEventListener("change", _resumeListener);
+                        }
+
+                      case 6:
+                      case "end":
+                        return _context6.stop();
+                    }
+                  }
+                }, null, this);
+              };
+
+              _reactNative.AppState.addEventListener("change", _resumeListener);
+            }
+
+          case 34:
+          case "end":
+            return _context7.stop();
+        }
+      }
+    }, null, this, [[5, 29]]);
+  }
+
+  function shouldUpdateBeIgnored(remotePackage, syncOptions) {
+    var rollbackRetryOptions, isFailedPackage, latestRollbackInfo, _rollbackRetryOptions, delayInHours, maxRetryAttempts, hoursSinceLatestRollback;
+
+    return _regenerator.default.async(function shouldUpdateBeIgnored$(_context8) {
+      while (1) {
+        switch (_context8.prev = _context8.next) {
+          case 0:
+            rollbackRetryOptions = syncOptions.rollbackRetryOptions;
+            isFailedPackage = remotePackage && remotePackage.failedInstall;
+
+            if (!(!isFailedPackage || !syncOptions.ignoreFailedUpdates)) {
+              _context8.next = 4;
+              break;
+            }
+
+            return _context8.abrupt("return", false);
+
+          case 4:
+            if (rollbackRetryOptions) {
+              _context8.next = 6;
+              break;
+            }
+
+            return _context8.abrupt("return", true);
+
+          case 6:
+            if (typeof rollbackRetryOptions !== "object") {
+              rollbackRetryOptions = CodePush.DEFAULT_ROLLBACK_RETRY_OPTIONS;
+            } else {
+              rollbackRetryOptions = (0, _objectSpread2.default)({}, CodePush.DEFAULT_ROLLBACK_RETRY_OPTIONS, rollbackRetryOptions);
+            }
+
+            if (validateRollbackRetryOptions(rollbackRetryOptions)) {
+              _context8.next = 9;
+              break;
+            }
+
+            return _context8.abrupt("return", true);
+
+          case 9:
+            _context8.next = 11;
+            return _regenerator.default.awrap(NativeCodePush.getLatestRollbackInfo());
+
+          case 11:
+            latestRollbackInfo = _context8.sent;
+
+            if (validateLatestRollbackInfo(latestRollbackInfo, remotePackage.packageHash)) {
+              _context8.next = 15;
+              break;
+            }
+
+            (0, _logging.default)("The latest rollback info is not valid.");
+            return _context8.abrupt("return", true);
+
+          case 15:
+            _rollbackRetryOptions = rollbackRetryOptions, delayInHours = _rollbackRetryOptions.delayInHours, maxRetryAttempts = _rollbackRetryOptions.maxRetryAttempts;
+            hoursSinceLatestRollback = (Date.now() - latestRollbackInfo.time) / (1000 * 60 * 60);
+
+            if (!(hoursSinceLatestRollback >= delayInHours && maxRetryAttempts >= latestRollbackInfo.count)) {
+              _context8.next = 20;
+              break;
+            }
+
+            (0, _logging.default)("Previous rollback should be ignored due to rollback retry options.");
+            return _context8.abrupt("return", false);
+
+          case 20:
+            return _context8.abrupt("return", true);
+
+          case 21:
+          case "end":
+            return _context8.stop();
+        }
+      }
+    }, null, this);
+  }
+
+  function validateLatestRollbackInfo(latestRollbackInfo, packageHash) {
+    return latestRollbackInfo && latestRollbackInfo.time && latestRollbackInfo.count && latestRollbackInfo.packageHash && latestRollbackInfo.packageHash === packageHash;
+  }
+
+  function validateRollbackRetryOptions(rollbackRetryOptions) {
+    if (typeof rollbackRetryOptions.delayInHours !== "number") {
+      (0, _logging.default)("The 'delayInHours' rollback retry parameter must be a number.");
+      return false;
+    }
+
+    if (typeof rollbackRetryOptions.maxRetryAttempts !== "number") {
+      (0, _logging.default)("The 'maxRetryAttempts' rollback retry parameter must be a number.");
+      return false;
+    }
+
+    if (rollbackRetryOptions.maxRetryAttempts < 1) {
+      (0, _logging.default)("The 'maxRetryAttempts' rollback retry parameter cannot be less then 1.");
+      return false;
+    }
+
+    return true;
+  }
+
+  var testConfig;
+
+  function setUpTestDependencies(testSdk, providedTestConfig, testNativeBridge) {
+    if (testSdk) module.exports.AcquisitionSdk = testSdk;
+    if (providedTestConfig) testConfig = providedTestConfig;
+    if (testNativeBridge) NativeCodePush = testNativeBridge;
+  }
+
+  var sync = function () {
+    var syncInProgress = false;
+
+    var setSyncCompleted = function setSyncCompleted() {
+      syncInProgress = false;
+    };
+
+    return function () {
+      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+      var syncStatusChangeCallback = arguments.length > 1 ? arguments[1] : undefined;
+      var downloadProgressCallback = arguments.length > 2 ? arguments[2] : undefined;
+      var handleBinaryVersionMismatchCallback = arguments.length > 3 ? arguments[3] : undefined;
+      var syncStatusCallbackWithTryCatch, downloadProgressCallbackWithTryCatch;
+
+      if (typeof syncStatusChangeCallback === "function") {
+        syncStatusCallbackWithTryCatch = function syncStatusCallbackWithTryCatch() {
+          try {
+            syncStatusChangeCallback.apply(void 0, arguments);
+          } catch (error) {
+            (0, _logging.default)("An error has occurred : " + error.stack);
+          }
+        };
+      }
+
+      if (typeof downloadProgressCallback === "function") {
+        downloadProgressCallbackWithTryCatch = function downloadProgressCallbackWithTryCatch() {
+          try {
+            downloadProgressCallback.apply(void 0, arguments);
+          } catch (error) {
+            (0, _logging.default)("An error has occurred: " + error.stack);
+          }
+        };
+      }
+
+      if (syncInProgress) {
+        typeof syncStatusCallbackWithTryCatch === "function" ? syncStatusCallbackWithTryCatch(CodePush.SyncStatus.SYNC_IN_PROGRESS) : (0, _logging.default)("Sync already in progress.");
+        return Promise.resolve(CodePush.SyncStatus.SYNC_IN_PROGRESS);
+      }
+
+      syncInProgress = true;
+      var syncPromise = syncInternal(options, syncStatusCallbackWithTryCatch, downloadProgressCallbackWithTryCatch, handleBinaryVersionMismatchCallback);
+      syncPromise.then(setSyncCompleted).catch(setSyncCompleted);
+      return syncPromise;
+    };
+  }();
+
+  function syncInternal() {
+    var options,
+        syncStatusChangeCallback,
+        downloadProgressCallback,
+        handleBinaryVersionMismatchCallback,
+        resolvedInstallMode,
+        syncOptions,
+        remotePackage,
+        doDownloadAndInstall,
+        updateShouldBeIgnored,
+        currentPackage,
+        _args10 = arguments;
+    return _regenerator.default.async(function syncInternal$(_context10) {
+      while (1) {
+        switch (_context10.prev = _context10.next) {
+          case 0:
+            options = _args10.length > 0 && _args10[0] !== undefined ? _args10[0] : {};
+            syncStatusChangeCallback = _args10.length > 1 ? _args10[1] : undefined;
+            downloadProgressCallback = _args10.length > 2 ? _args10[2] : undefined;
+            handleBinaryVersionMismatchCallback = _args10.length > 3 ? _args10[3] : undefined;
+            syncOptions = (0, _objectSpread2.default)({
+              deploymentKey: null,
+              ignoreFailedUpdates: true,
+              rollbackRetryOptions: null,
+              installMode: CodePush.InstallMode.ON_NEXT_RESTART,
+              mandatoryInstallMode: CodePush.InstallMode.IMMEDIATE,
+              minimumBackgroundDuration: 0,
+              updateDialog: null
+            }, options);
+            syncStatusChangeCallback = typeof syncStatusChangeCallback === "function" ? syncStatusChangeCallback : function (syncStatus) {
+              switch (syncStatus) {
+                case CodePush.SyncStatus.CHECKING_FOR_UPDATE:
+                  (0, _logging.default)("Checking for update.");
+                  break;
+
+                case CodePush.SyncStatus.AWAITING_USER_ACTION:
+                  (0, _logging.default)("Awaiting user action.");
+                  break;
+
+                case CodePush.SyncStatus.DOWNLOADING_PACKAGE:
+                  (0, _logging.default)("Downloading package.");
+                  break;
+
+                case CodePush.SyncStatus.INSTALLING_UPDATE:
+                  (0, _logging.default)("Installing update.");
+                  break;
+
+                case CodePush.SyncStatus.UP_TO_DATE:
+                  (0, _logging.default)("App is up to date.");
+                  break;
+
+                case CodePush.SyncStatus.UPDATE_IGNORED:
+                  (0, _logging.default)("User cancelled the update.");
+                  break;
+
+                case CodePush.SyncStatus.UPDATE_INSTALLED:
+                  if (resolvedInstallMode == CodePush.InstallMode.ON_NEXT_RESTART) {
+                    (0, _logging.default)("Update is installed and will be run on the next app restart.");
+                  } else if (resolvedInstallMode == CodePush.InstallMode.ON_NEXT_RESUME) {
+                    if (syncOptions.minimumBackgroundDuration > 0) {
+                      (0, _logging.default)("Update is installed and will be run after the app has been in the background for at least " + syncOptions.minimumBackgroundDuration + " seconds.");
+                    } else {
+                      (0, _logging.default)("Update is installed and will be run when the app next resumes.");
+                    }
+                  }
+
+                  break;
+
+                case CodePush.SyncStatus.UNKNOWN_ERROR:
+                  (0, _logging.default)("An unknown error occurred.");
+                  break;
+              }
+            };
+            _context10.prev = 6;
+            _context10.next = 9;
+            return _regenerator.default.awrap(CodePush.notifyApplicationReady());
+
+          case 9:
+            syncStatusChangeCallback(CodePush.SyncStatus.CHECKING_FOR_UPDATE);
+            _context10.next = 12;
+            return _regenerator.default.awrap(checkForUpdate(syncOptions.deploymentKey, handleBinaryVersionMismatchCallback));
+
+          case 12:
+            remotePackage = _context10.sent;
+
+            doDownloadAndInstall = function doDownloadAndInstall() {
+              var localPackage;
+              return _regenerator.default.async(function doDownloadAndInstall$(_context9) {
+                while (1) {
+                  switch (_context9.prev = _context9.next) {
+                    case 0:
+                      syncStatusChangeCallback(CodePush.SyncStatus.DOWNLOADING_PACKAGE);
+                      _context9.next = 3;
+                      return _regenerator.default.awrap(remotePackage.download(downloadProgressCallback));
+
+                    case 3:
+                      localPackage = _context9.sent;
+                      resolvedInstallMode = localPackage.isMandatory ? syncOptions.mandatoryInstallMode : syncOptions.installMode;
+                      syncStatusChangeCallback(CodePush.SyncStatus.INSTALLING_UPDATE);
+                      _context9.next = 8;
+                      return _regenerator.default.awrap(localPackage.install(resolvedInstallMode, syncOptions.minimumBackgroundDuration, function () {
+                        syncStatusChangeCallback(CodePush.SyncStatus.UPDATE_INSTALLED);
+                      }));
+
+                    case 8:
+                      return _context9.abrupt("return", CodePush.SyncStatus.UPDATE_INSTALLED);
+
+                    case 9:
+                    case "end":
+                      return _context9.stop();
+                  }
+                }
+              }, null, this);
+            };
+
+            _context10.next = 16;
+            return _regenerator.default.awrap(shouldUpdateBeIgnored(remotePackage, syncOptions));
+
+          case 16:
+            updateShouldBeIgnored = _context10.sent;
+
+            if (!(!remotePackage || updateShouldBeIgnored)) {
+              _context10.next = 31;
+              break;
+            }
+
+            if (updateShouldBeIgnored) {
+              (0, _logging.default)("An update is available, but it is being ignored due to having been previously rolled back.");
+            }
+
+            _context10.next = 21;
+            return _regenerator.default.awrap(CodePush.getCurrentPackage());
+
+          case 21:
+            currentPackage = _context10.sent;
+
+            if (!(currentPackage && currentPackage.isPending)) {
+              _context10.next = 27;
+              break;
+            }
+
+            syncStatusChangeCallback(CodePush.SyncStatus.UPDATE_INSTALLED);
+            return _context10.abrupt("return", CodePush.SyncStatus.UPDATE_INSTALLED);
+
+          case 27:
+            syncStatusChangeCallback(CodePush.SyncStatus.UP_TO_DATE);
+            return _context10.abrupt("return", CodePush.SyncStatus.UP_TO_DATE);
+
+          case 29:
+            _context10.next = 41;
+            break;
+
+          case 31:
+            if (!syncOptions.updateDialog) {
+              _context10.next = 38;
+              break;
+            }
+
+            if (typeof syncOptions.updateDialog !== "object") {
+              syncOptions.updateDialog = CodePush.DEFAULT_UPDATE_DIALOG;
+            } else {
+              syncOptions.updateDialog = (0, _objectSpread2.default)({}, CodePush.DEFAULT_UPDATE_DIALOG, syncOptions.updateDialog);
+            }
+
+            _context10.next = 35;
+            return _regenerator.default.awrap(new Promise(function (resolve, reject) {
+              var message = null;
+              var installButtonText = null;
+              var dialogButtons = [];
+
+              if (remotePackage.isMandatory) {
+                message = syncOptions.updateDialog.mandatoryUpdateMessage;
+                installButtonText = syncOptions.updateDialog.mandatoryContinueButtonLabel;
+              } else {
+                message = syncOptions.updateDialog.optionalUpdateMessage;
+                installButtonText = syncOptions.updateDialog.optionalInstallButtonLabel;
+                dialogButtons.push({
+                  text: syncOptions.updateDialog.optionalIgnoreButtonLabel,
+                  onPress: function onPress() {
+                    syncStatusChangeCallback(CodePush.SyncStatus.UPDATE_IGNORED);
+                    resolve(CodePush.SyncStatus.UPDATE_IGNORED);
+                  }
+                });
+              }
+
+              dialogButtons.push({
+                text: installButtonText,
+                onPress: function onPress() {
+                  doDownloadAndInstall().then(resolve, reject);
+                }
+              });
+
+              if (syncOptions.updateDialog.appendReleaseDescription && remotePackage.description) {
+                message += syncOptions.updateDialog.descriptionPrefix + " " + remotePackage.description;
+              }
+
+              syncStatusChangeCallback(CodePush.SyncStatus.AWAITING_USER_ACTION);
+
+              _AlertAdapter.Alert.alert(syncOptions.updateDialog.title, message, dialogButtons);
+            }));
+
+          case 35:
+            return _context10.abrupt("return", _context10.sent);
+
+          case 38:
+            _context10.next = 40;
+            return _regenerator.default.awrap(doDownloadAndInstall());
+
+          case 40:
+            return _context10.abrupt("return", _context10.sent);
+
+          case 41:
+            _context10.next = 48;
+            break;
+
+          case 43:
+            _context10.prev = 43;
+            _context10.t0 = _context10["catch"](6);
+            syncStatusChangeCallback(CodePush.SyncStatus.UNKNOWN_ERROR);
+            (0, _logging.default)(_context10.t0.message);
+            throw _context10.t0;
+
+          case 48:
+          case "end":
+            return _context10.stop();
+        }
+      }
+    }, null, this, [[6, 43]]);
+  }
+
+  ;
+  var CodePush;
+
+  function codePushify() {
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    var React;
+
+    var ReactNative = _$$_REQUIRE(_dependencyMap[12], "react-native");
+
+    try {
+      React = _$$_REQUIRE(_dependencyMap[17], "react");
+    } catch (e) {}
+
+    if (!React) {
+      try {
+        React = ReactNative.React;
+      } catch (e) {}
+
+      if (!React) {
+        throw new Error("Unable to find the 'React' module.");
+      }
+    }
+
+    if (!React.Component) {
+      throw new Error("Unable to find the \"Component\" class, please either:\n1. Upgrade to a newer version of React Native that supports it, or\n2. Call the codePush.sync API in your component instead of using the @codePush decorator");
+    }
+
+    var decorator = function decorator(RootComponent) {
+      var extended = function (_React$Component) {
+        (0, _inherits2.default)(CodePushComponent, _React$Component);
+
+        function CodePushComponent() {
+          (0, _classCallCheck2.default)(this, CodePushComponent);
+          return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CodePushComponent).apply(this, arguments));
+        }
+
+        (0, _createClass2.default)(CodePushComponent, [{
+          key: "componentDidMount",
+          value: function componentDidMount() {
+            if (options.checkFrequency === CodePush.CheckFrequency.MANUAL) {
+              CodePush.notifyAppReady();
+            } else {
+              var rootComponentInstance = this.refs.rootComponent;
+              var syncStatusCallback;
+
+              if (rootComponentInstance && rootComponentInstance.codePushStatusDidChange) {
+                syncStatusCallback = rootComponentInstance.codePushStatusDidChange;
+
+                if (rootComponentInstance instanceof React.Component) {
+                  syncStatusCallback = syncStatusCallback.bind(rootComponentInstance);
+                }
+              }
+
+              var downloadProgressCallback;
+
+              if (rootComponentInstance && rootComponentInstance.codePushDownloadDidProgress) {
+                downloadProgressCallback = rootComponentInstance.codePushDownloadDidProgress;
+
+                if (rootComponentInstance instanceof React.Component) {
+                  downloadProgressCallback = downloadProgressCallback.bind(rootComponentInstance);
+                }
+              }
+
+              var handleBinaryVersionMismatchCallback;
+
+              if (rootComponentInstance && rootComponentInstance.codePushOnBinaryVersionMismatch) {
+                handleBinaryVersionMismatchCallback = rootComponentInstance.codePushOnBinaryVersionMismatch;
+
+                if (rootComponentInstance instanceof React.Component) {
+                  handleBinaryVersionMismatchCallback = handleBinaryVersionMismatchCallback.bind(rootComponentInstance);
+                }
+              }
+
+              CodePush.sync(options, syncStatusCallback, downloadProgressCallback, handleBinaryVersionMismatchCallback);
+
+              if (options.checkFrequency === CodePush.CheckFrequency.ON_APP_RESUME) {
+                ReactNative.AppState.addEventListener("change", function (newState) {
+                  newState === "active" && CodePush.sync(options, syncStatusCallback, downloadProgressCallback);
+                });
+              }
+            }
+          }
+        }, {
+          key: "render",
+          value: function render() {
+            var props = (0, _objectSpread2.default)({}, this.props);
+
+            if (RootComponent.prototype.render) {
+              props.ref = "rootComponent";
+            }
+
+            return React.createElement(RootComponent, (0, _extends2.default)({}, props, {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 578
+              }
+            }));
+          }
+        }]);
+        return CodePushComponent;
+      }(React.Component);
+
+      return (0, _hoistNonReactStatics.default)(extended, RootComponent);
+    };
+
+    if (typeof options === "function") {
+      return decorator(options);
+    } else {
+      return decorator;
+    }
+  }
+
+  if (NativeCodePush) {
+    CodePush = codePushify;
+    (0, _extends2.default)(CodePush, {
+      AcquisitionSdk: _acquisitionSdk.AcquisitionManager,
+      checkForUpdate: checkForUpdate,
+      getConfiguration: getConfiguration,
+      getCurrentPackage: getCurrentPackage,
+      getUpdateMetadata: getUpdateMetadata,
+      log: _logging.default,
+      notifyAppReady: notifyApplicationReady,
+      notifyApplicationReady: notifyApplicationReady,
+      restartApp: _RestartManager.default.restartApp,
+      setUpTestDependencies: setUpTestDependencies,
+      sync: sync,
+      disallowRestart: _RestartManager.default.disallow,
+      allowRestart: _RestartManager.default.allow,
+      clearUpdates: NativeCodePush.clearUpdates,
+      InstallMode: {
+        IMMEDIATE: NativeCodePush.codePushInstallModeImmediate,
+        ON_NEXT_RESTART: NativeCodePush.codePushInstallModeOnNextRestart,
+        ON_NEXT_RESUME: NativeCodePush.codePushInstallModeOnNextResume,
+        ON_NEXT_SUSPEND: NativeCodePush.codePushInstallModeOnNextSuspend
+      },
+      SyncStatus: {
+        UP_TO_DATE: 0,
+        UPDATE_INSTALLED: 1,
+        UPDATE_IGNORED: 2,
+        UNKNOWN_ERROR: 3,
+        SYNC_IN_PROGRESS: 4,
+        CHECKING_FOR_UPDATE: 5,
+        AWAITING_USER_ACTION: 6,
+        DOWNLOADING_PACKAGE: 7,
+        INSTALLING_UPDATE: 8
+      },
+      CheckFrequency: {
+        ON_APP_START: 0,
+        ON_APP_RESUME: 1,
+        MANUAL: 2
+      },
+      UpdateState: {
+        RUNNING: NativeCodePush.codePushUpdateStateRunning,
+        PENDING: NativeCodePush.codePushUpdateStatePending,
+        LATEST: NativeCodePush.codePushUpdateStateLatest
+      },
+      DeploymentStatus: {
+        FAILED: "DeploymentFailed",
+        SUCCEEDED: "DeploymentSucceeded"
+      },
+      DEFAULT_UPDATE_DIALOG: {
+        appendReleaseDescription: false,
+        descriptionPrefix: " Description: ",
+        mandatoryContinueButtonLabel: "Continue",
+        mandatoryUpdateMessage: "An update is available that must be installed.",
+        optionalIgnoreButtonLabel: "Ignore",
+        optionalInstallButtonLabel: "Install",
+        optionalUpdateMessage: "An update is available. Would you like to install it?",
+        title: "Update available"
+      },
+      DEFAULT_ROLLBACK_RETRY_OPTIONS: {
+        delayInHours: 24,
+        maxRetryAttempts: 1
+      }
+    });
+  } else {
+    (0, _logging.default)("The CodePush module doesn't appear to be properly installed. Please double-check that everything is setup correctly.");
+  }
+
+  module.exports = CodePush;
+},424,[1,8,19,20,35,38,41,103,49,425,426,427,2,429,430,431,432,53],"node_modules/react-native-code-push/CodePush.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var AcquisitionStatus = function () {
+    function AcquisitionStatus() {}
+
+    AcquisitionStatus.DeploymentSucceeded = "DeploymentSucceeded";
+    AcquisitionStatus.DeploymentFailed = "DeploymentFailed";
+    return AcquisitionStatus;
+  }();
+
+  exports.AcquisitionStatus = AcquisitionStatus;
+
+  var AcquisitionManager = function () {
+    function AcquisitionManager(httpRequester, configuration) {
+      this._httpRequester = httpRequester;
+      this._serverUrl = configuration.serverUrl;
+
+      if (this._serverUrl.slice(-1) !== "/") {
+        this._serverUrl += "/";
+      }
+
+      this._appVersion = configuration.appVersion;
+      this._clientUniqueId = configuration.clientUniqueId;
+      this._deploymentKey = configuration.deploymentKey;
+      this._ignoreAppVersion = configuration.ignoreAppVersion;
+    }
+
+    AcquisitionManager.prototype.queryUpdateWithCurrentPackage = function (currentPackage, callback) {
+      var _this = this;
+
+      if (!currentPackage || !currentPackage.appVersion) {
+        throw new Error("Calling common acquisition SDK with incorrect package");
+      }
+
+      var updateRequest = {
+        deploymentKey: this._deploymentKey,
+        appVersion: currentPackage.appVersion,
+        packageHash: currentPackage.packageHash,
+        isCompanion: this._ignoreAppVersion,
+        label: currentPackage.label,
+        clientUniqueId: this._clientUniqueId
+      };
+      var requestUrl = this._serverUrl + "updateCheck?" + queryStringify(updateRequest);
+
+      this._httpRequester.request(0, requestUrl, function (error, response) {
+        if (error) {
+          callback(error, null);
+          return;
+        }
+
+        if (response.statusCode !== 200) {
+          var errorMessage;
+
+          if (response.statusCode === 0) {
+            errorMessage = "Couldn't send request to " + requestUrl + ", xhr.statusCode = 0 was returned. One of the possible reasons for that might be connection problems. Please, check your internet connection.";
+          } else {
+            errorMessage = response.statusCode + ": " + response.body;
+          }
+
+          callback(new Error(errorMessage), null);
+          return;
+        }
+
+        try {
+          var responseObject = JSON.parse(response.body);
+          var updateInfo = responseObject.updateInfo;
+        } catch (error) {
+          callback(error, null);
+          return;
+        }
+
+        if (!updateInfo) {
+          callback(error, null);
+          return;
+        } else if (updateInfo.updateAppVersion) {
+          callback(null, {
+            updateAppVersion: true,
+            appVersion: updateInfo.appVersion
+          });
+          return;
+        } else if (!updateInfo.isAvailable) {
+          callback(null, null);
+          return;
+        }
+
+        var remotePackage = {
+          deploymentKey: _this._deploymentKey,
+          description: updateInfo.description,
+          label: updateInfo.label,
+          appVersion: updateInfo.appVersion,
+          isMandatory: updateInfo.isMandatory,
+          packageHash: updateInfo.packageHash,
+          packageSize: updateInfo.packageSize,
+          downloadUrl: updateInfo.downloadURL
+        };
+        callback(null, remotePackage);
+      });
+    };
+
+    AcquisitionManager.prototype.reportStatusDeploy = function (deployedPackage, status, previousLabelOrAppVersion, previousDeploymentKey, callback) {
+      var url = this._serverUrl + "reportStatus/deploy";
+      var body = {
+        appVersion: this._appVersion,
+        deploymentKey: this._deploymentKey
+      };
+
+      if (this._clientUniqueId) {
+        body.clientUniqueId = this._clientUniqueId;
+      }
+
+      if (deployedPackage) {
+        body.label = deployedPackage.label;
+        body.appVersion = deployedPackage.appVersion;
+
+        switch (status) {
+          case AcquisitionStatus.DeploymentSucceeded:
+          case AcquisitionStatus.DeploymentFailed:
+            body.status = status;
+            break;
+
+          default:
+            if (callback) {
+              if (!status) {
+                callback(new Error("Missing status argument."), null);
+              } else {
+                callback(new Error("Unrecognized status \"" + status + "\"."), null);
+              }
+            }
+
+            return;
+        }
+      }
+
+      if (previousLabelOrAppVersion) {
+        body.previousLabelOrAppVersion = previousLabelOrAppVersion;
+      }
+
+      if (previousDeploymentKey) {
+        body.previousDeploymentKey = previousDeploymentKey;
+      }
+
+      callback = typeof arguments[arguments.length - 1] === "function" && arguments[arguments.length - 1];
+
+      this._httpRequester.request(2, url, JSON.stringify(body), function (error, response) {
+        if (callback) {
+          if (error) {
+            callback(error, null);
+            return;
+          }
+
+          if (response.statusCode !== 200) {
+            callback(new Error(response.statusCode + ": " + response.body), null);
+            return;
+          }
+
+          callback(null, null);
+        }
+      });
+    };
+
+    AcquisitionManager.prototype.reportStatusDownload = function (downloadedPackage, callback) {
+      var url = this._serverUrl + "reportStatus/download";
+      var body = {
+        clientUniqueId: this._clientUniqueId,
+        deploymentKey: this._deploymentKey,
+        label: downloadedPackage.label
+      };
+
+      this._httpRequester.request(2, url, JSON.stringify(body), function (error, response) {
+        if (callback) {
+          if (error) {
+            callback(error, null);
+            return;
+          }
+
+          if (response.statusCode !== 200) {
+            callback(new Error(response.statusCode + ": " + response.body), null);
+            return;
+          }
+
+          callback(null, null);
+        }
+      });
+    };
+
+    return AcquisitionManager;
+  }();
+
+  exports.AcquisitionManager = AcquisitionManager;
+
+  function queryStringify(object) {
+    var queryString = "";
+    var isFirst = true;
+
+    for (var property in object) {
+      if (object.hasOwnProperty(property)) {
+        var value = object[property];
+
+        if (!isFirst) {
+          queryString += "&";
+        }
+
+        queryString += encodeURIComponent(property) + "=";
+
+        if (value !== null && typeof value !== "undefined") {
+          queryString += encodeURIComponent(value);
+        }
+
+        isFirst = false;
+      }
+    }
+
+    return queryString;
+  }
+},425,[],"node_modules/code-push/script/acquisition-sdk.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireWildcard = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireWildcard");
+
+  var _reactNative = _interopRequireWildcard(_$$_REQUIRE(_dependencyMap[1], "react-native"));
+
+  var Alert = _reactNative.default.Alert;
+
+  if (_reactNative.Platform.OS === "android") {
+    var CodePushDialog = _reactNative.default.NativeModules.CodePushDialog;
+    Alert = {
+      alert: function alert(title, message, buttons) {
+        if (buttons.length > 2) {
+          throw "Can only show 2 buttons for Android dialog.";
+        }
+
+        var button1Text = buttons[0] ? buttons[0].text : null,
+            button2Text = buttons[1] ? buttons[1].text : null;
+        CodePushDialog.showDialog(title, message, button1Text, button2Text, function (buttonId) {
+          buttons[buttonId].onPress && buttons[buttonId].onPress();
+        }, function (error) {
+          throw error;
+        });
+      }
+    };
+  }
+
+  module.exports = {
+    Alert: Alert
+  };
+},426,[392,2],"node_modules/react-native-code-push/AlertAdapter.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _regeneratorRuntime = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/regenerator");
+
+  var packageJson = _$$_REQUIRE(_dependencyMap[1], "./package.json");
+
+  module.exports = {
+    request: function request(verb, url, requestBody, callback) {
+      var headers, response, statusCode, body;
+      return _regeneratorRuntime.async(function request$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              if (typeof requestBody === "function") {
+                callback = requestBody;
+                requestBody = null;
+              }
+
+              headers = {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "X-CodePush-Plugin-Name": packageJson.name,
+                "X-CodePush-Plugin-Version": packageJson.version,
+                "X-CodePush-SDK-Version": packageJson.dependencies["code-push"]
+              };
+
+              if (requestBody && typeof requestBody === "object") {
+                requestBody = JSON.stringify(requestBody);
+              }
+
+              _context.prev = 3;
+              _context.next = 6;
+              return _regeneratorRuntime.awrap(fetch(url, {
+                method: getHttpMethodName(verb),
+                headers: headers,
+                body: requestBody
+              }));
+
+            case 6:
+              response = _context.sent;
+              statusCode = response.status;
+              _context.next = 10;
+              return _regeneratorRuntime.awrap(response.text());
+
+            case 10:
+              body = _context.sent;
+              callback(null, {
+                statusCode: statusCode,
+                body: body
+              });
+              _context.next = 17;
+              break;
+
+            case 14:
+              _context.prev = 14;
+              _context.t0 = _context["catch"](3);
+              callback(_context.t0);
+
+            case 17:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, null, this, [[3, 14]]);
+    }
+  };
+
+  function getHttpMethodName(verb) {
+    return ["GET", "HEAD", "POST", "PUT", "DELETE", "TRACE", "OPTIONS", "CONNECT", "PATCH"][verb];
+  }
+},427,[103,428],"node_modules/react-native-code-push/request-fetch-adapter.js");
+__d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
+  module.exports = {
+  "_args": [
+    [
+      "react-native-code-push@5.5.2",
+      "/Users/descobedo/Development/Internal/SDK/sdkapp"
+    ]
+  ],
+  "_from": "react-native-code-push@5.5.2",
+  "_id": "react-native-code-push@5.5.2",
+  "_inBundle": false,
+  "_integrity": "sha512-hBXGhB6DcVqwnN4jWHcCCUBt3GMoC/FZ+ys/mlHMaR9696oKbv5ioW8mAFHMCtPRpdlt2Keo6MoLBMHigTSzug==",
+  "_location": "/react-native-code-push",
+  "_phantomChildren": {
+    "chalk": "1.1.3",
+    "cli-width": "2.2.0",
+    "code-point-at": "1.1.0",
+    "escape-string-regexp": "1.0.5",
+    "exit-hook": "1.1.1",
+    "extend": "3.0.2",
+    "inflight": "1.0.6",
+    "inherits": "2.0.3",
+    "lodash": "4.17.11",
+    "minimatch": "3.0.4",
+    "number-is-nan": "1.0.1",
+    "object-assign": "4.1.1",
+    "once": "1.4.0",
+    "os-tmpdir": "1.0.2",
+    "path-is-absolute": "1.0.1",
+    "pinkie-promise": "2.0.1",
+    "run-async": "2.3.0",
+    "rx": "4.1.0",
+    "spawn-sync": "1.0.15",
+    "strip-ansi": "3.0.1",
+    "through": "2.3.8"
+  },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "react-native-code-push@5.5.2",
+    "name": "react-native-code-push",
+    "escapedName": "react-native-code-push",
+    "rawSpec": "5.5.2",
+    "saveSpec": null,
+    "fetchSpec": "5.5.2"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-code-push/-/react-native-code-push-5.5.2.tgz",
+  "_spec": "5.5.2",
+  "_where": "/Users/descobedo/Development/Internal/SDK/sdkapp",
+  "author": {
+    "name": "Microsoft Corporation"
+  },
+  "bugs": {
+    "url": "https://github.com/Microsoft/react-native-code-push/issues"
+  },
+  "dependencies": {
+    "code-push": "2.0.6",
+    "glob": "^5.0.15",
+    "hoist-non-react-statics": "^2.3.1",
+    "inquirer": "1.1.2",
+    "plist": "3.0.1",
+    "xcode": "1.0.0"
+  },
+  "description": "React Native plugin for the CodePush service",
+  "devDependencies": {
+    "archiver": "latest",
+    "body-parser": "latest",
+    "code-push-plugin-testing-framework": "file:./code-push-plugin-testing-framework",
+    "del": "latest",
+    "express": "latest",
+    "gulp-insert": "latest",
+    "gulp-tslint": "latest",
+    "gulp-typescript": "2.12.2",
+    "mkdirp": "latest",
+    "q": "^1.4.1",
+    "run-sequence": "latest",
+    "tslint": "^4.3.1",
+    "typescript": "^2.1.5"
+  },
+  "homepage": "https://microsoft.github.io/code-push",
+  "keywords": [
+    "react-native",
+    "code",
+    "push"
+  ],
+  "license": "MIT",
+  "main": "CodePush.js",
+  "name": "react-native-code-push",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Microsoft/react-native-code-push.git"
+  },
+  "rnpm": {
+    "android": {
+      "packageInstance": "new CodePush(${androidDeploymentKey}, getApplicationContext(), BuildConfig.DEBUG)"
+    },
+    "ios": {
+      "sharedLibraries": [
+        "libz"
+      ]
+    },
+    "params": [
+      {
+        "type": "input",
+        "name": "androidDeploymentKey",
+        "message": "What is your CodePush deployment key for Android (hit <ENTER> to ignore)"
+      }
+    ],
+    "commands": {
+      "postlink": "node node_modules/react-native-code-push/scripts/postlink/run"
+    }
+  },
+  "typings": "typings/react-native-code-push.d.ts",
+  "version": "5.5.2"
+}
+;
+},428,[],"node_modules/react-native-code-push/package.json");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _regeneratorRuntime = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/regenerator");
+
+  var log = _$$_REQUIRE(_dependencyMap[1], "./logging");
+
+  var NativeCodePush = _$$_REQUIRE(_dependencyMap[2], "react-native").NativeModules.CodePush;
+
+  var RestartManager = function () {
+    var _allowed = true;
+    var _restartInProgress = false;
+    var _restartQueue = [];
+
+    function allow() {
+      log("Re-allowing restarts");
+      _allowed = true;
+
+      if (_restartQueue.length) {
+        log("Executing pending restart");
+        restartApp(_restartQueue.shift(1));
+      }
+    }
+
+    function clearPendingRestart() {
+      _restartQueue = [];
+    }
+
+    function disallow() {
+      log("Disallowing restarts");
+      _allowed = false;
+    }
+
+    function restartApp() {
+      var onlyIfUpdateIsPending,
+          _args = arguments;
+      return _regeneratorRuntime.async(function restartApp$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              onlyIfUpdateIsPending = _args.length > 0 && _args[0] !== undefined ? _args[0] : false;
+
+              if (!_restartInProgress) {
+                _context.next = 6;
+                break;
+              }
+
+              log("Restart request queued until the current restart is completed");
+
+              _restartQueue.push(onlyIfUpdateIsPending);
+
+              _context.next = 19;
+              break;
+
+            case 6:
+              if (_allowed) {
+                _context.next = 11;
+                break;
+              }
+
+              log("Restart request queued until restarts are re-allowed");
+
+              _restartQueue.push(onlyIfUpdateIsPending);
+
+              _context.next = 19;
+              break;
+
+            case 11:
+              _restartInProgress = true;
+              _context.next = 14;
+              return _regeneratorRuntime.awrap(NativeCodePush.restartApp(onlyIfUpdateIsPending));
+
+            case 14:
+              if (!_context.sent) {
+                _context.next = 17;
+                break;
+              }
+
+              log("Restarting app");
+              return _context.abrupt("return");
+
+            case 17:
+              _restartInProgress = false;
+
+              if (_restartQueue.length) {
+                restartApp(_restartQueue.shift(1));
+              }
+
+            case 19:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, null, this);
+    }
+
+    return {
+      allow: allow,
+      clearPendingRestart: clearPendingRestart,
+      disallow: disallow,
+      restartApp: restartApp
+    };
+  }();
+
+  module.exports = RestartManager;
+},429,[103,430,2],"node_modules/react-native-code-push/RestartManager.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  function log(message) {
+    console.log("[CodePush] " + message);
+  }
+
+  module.exports = log;
+},430,[],"node_modules/react-native-code-push/logging.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  'use strict';
+
+  var REACT_STATICS = {
+    childContextTypes: true,
+    contextTypes: true,
+    defaultProps: true,
+    displayName: true,
+    getDefaultProps: true,
+    getDerivedStateFromProps: true,
+    mixins: true,
+    propTypes: true,
+    type: true
+  };
+  var KNOWN_STATICS = {
+    name: true,
+    length: true,
+    prototype: true,
+    caller: true,
+    callee: true,
+    arguments: true,
+    arity: true
+  };
+  var defineProperty = Object.defineProperty;
+  var getOwnPropertyNames = Object.getOwnPropertyNames;
+  var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+  var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+  var getPrototypeOf = Object.getPrototypeOf;
+  var objectPrototype = getPrototypeOf && getPrototypeOf(Object);
+
+  function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
+    if (typeof sourceComponent !== 'string') {
+      if (objectPrototype) {
+        var inheritedComponent = getPrototypeOf(sourceComponent);
+
+        if (inheritedComponent && inheritedComponent !== objectPrototype) {
+          hoistNonReactStatics(targetComponent, inheritedComponent, blacklist);
+        }
+      }
+
+      var keys = getOwnPropertyNames(sourceComponent);
+
+      if (getOwnPropertySymbols) {
+        keys = keys.concat(getOwnPropertySymbols(sourceComponent));
+      }
+
+      for (var i = 0; i < keys.length; ++i) {
+        var key = keys[i];
+
+        if (!REACT_STATICS[key] && !KNOWN_STATICS[key] && (!blacklist || !blacklist[key])) {
+          var descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+
+          try {
+            defineProperty(targetComponent, key, descriptor);
+          } catch (e) {}
+        }
+      }
+
+      return targetComponent;
+    }
+
+    return targetComponent;
+  }
+
+  module.exports = hoistNonReactStatics;
+},431,[],"node_modules/react-native-code-push/node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
+  var _regenerator = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "@babel/runtime/regenerator"));
+
+  var _objectSpread2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "@babel/runtime/helpers/objectSpread"));
+
+  var _extends2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "@babel/runtime/helpers/extends"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[4], "react-native");
+
+  var _RestartManager = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "./RestartManager"));
+
+  var _logging = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "./logging"));
+
+  module.exports = function (NativeCodePush) {
+    var remote = function remote(reportStatusDownload) {
+      return {
+        download: function download(downloadProgressCallback) {
+          var downloadProgressSubscription, codePushEventEmitter, updatePackageCopy, downloadedPackage;
+          return _regenerator.default.async(function download$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  if (this.downloadUrl) {
+                    _context.next = 2;
+                    break;
+                  }
+
+                  throw new Error("Cannot download an update without a download url");
+
+                case 2:
+                  if (downloadProgressCallback) {
+                    codePushEventEmitter = new _reactNative.NativeEventEmitter(NativeCodePush);
+                    downloadProgressSubscription = codePushEventEmitter.addListener("CodePushDownloadProgress", downloadProgressCallback);
+                  }
+
+                  _context.prev = 3;
+                  updatePackageCopy = (0, _extends2.default)({}, this);
+                  Object.keys(updatePackageCopy).forEach(function (key) {
+                    return typeof updatePackageCopy[key] === 'function' && delete updatePackageCopy[key];
+                  });
+                  _context.next = 8;
+                  return _regenerator.default.awrap(NativeCodePush.downloadUpdate(updatePackageCopy, !!downloadProgressCallback));
+
+                case 8:
+                  downloadedPackage = _context.sent;
+
+                  if (reportStatusDownload) {
+                    reportStatusDownload(this).catch(function (err) {
+                      (0, _logging.default)("Report download status failed: " + err);
+                    });
+                  }
+
+                  return _context.abrupt("return", (0, _objectSpread2.default)({}, downloadedPackage, local));
+
+                case 11:
+                  _context.prev = 11;
+                  downloadProgressSubscription && downloadProgressSubscription.remove();
+                  return _context.finish(11);
+
+                case 14:
+                case "end":
+                  return _context.stop();
+              }
+            }
+          }, null, this, [[3,, 11, 14]]);
+        },
+        isPending: false
+      };
+    };
+
+    var local = {
+      install: function install() {
+        var installMode,
+            minimumBackgroundDuration,
+            updateInstalledCallback,
+            localPackage,
+            localPackageCopy,
+            _args2 = arguments;
+        return _regenerator.default.async(function install$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                installMode = _args2.length > 0 && _args2[0] !== undefined ? _args2[0] : NativeCodePush.codePushInstallModeOnNextRestart;
+                minimumBackgroundDuration = _args2.length > 1 && _args2[1] !== undefined ? _args2[1] : 0;
+                updateInstalledCallback = _args2.length > 2 ? _args2[2] : undefined;
+                localPackage = this;
+                localPackageCopy = (0, _extends2.default)({}, localPackage);
+                _context2.next = 7;
+                return _regenerator.default.awrap(NativeCodePush.installUpdate(localPackageCopy, installMode, minimumBackgroundDuration));
+
+              case 7:
+                updateInstalledCallback && updateInstalledCallback();
+
+                if (installMode == NativeCodePush.codePushInstallModeImmediate) {
+                  _RestartManager.default.restartApp(false);
+                } else {
+                  _RestartManager.default.clearPendingRestart();
+
+                  localPackage.isPending = true;
+                }
+
+              case 9:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, null, this);
+      },
+      isPending: false
+    };
+    return {
+      local: local,
+      remote: remote
+    };
+  };
+},432,[1,103,49,8,2,429,430],"node_modules/react-native-code-push/package-mixins.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
   var _interopRequireWildcard = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/interopRequireWildcard");
 
   Object.defineProperty(exports, "__esModule", {
@@ -83498,7 +85225,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _default = (0, _redux.compose)(withConnect)(QuantityPricing);
 
   exports.default = _default;
-},423,[1,392,19,20,35,38,41,53,2,70,390,404],"src/components/view/QuantityPricing/index.js");
+},433,[1,392,19,20,35,38,41,53,2,70,390,404],"src/components/view/QuantityPricing/index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -83686,7 +85413,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _default = (0, _redux.compose)(withReducer, withConnect)(Demo);
 
   exports.default = _default;
-},424,[1,392,19,20,35,38,41,53,2,70,390,404,425,430,433],"src/components/view/Demo/index.js");
+},434,[1,392,19,20,35,38,41,53,2,70,390,404,435,440,443],"src/components/view/Demo/index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -83793,7 +85520,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
 
   exports.default = _default;
-},425,[1,392,8,19,20,35,38,41,53,390,396,426],"src/helpers/utils/injectReducer.js");
+},435,[1,392,8,19,20,35,38,41,53,390,396,436],"src/helpers/utils/injectReducer.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -83829,7 +85556,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       injectReducer: injectReducerFactory(store, true)
     };
   }
-},426,[1,400,427,428,429,417],"src/helpers/utils/reducerInjectors.js");
+},436,[1,400,437,438,439,417],"src/helpers/utils/reducerInjectors.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   /**
    * @license
@@ -91010,7 +92737,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
         root._ = _;
       }
   }).call(this);
-},427,[],"node_modules/lodash/lodash.js");
+},437,[],"node_modules/lodash/lodash.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   (function (global) {
     "use strict";
@@ -92570,7 +94297,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       });
     }
   })(typeof exports !== 'undefined' ? global : this);
-},428,[],"node_modules/harmony-reflect/reflect.js");
+},438,[],"node_modules/harmony-reflect/reflect.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -92593,7 +94320,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     };
     (0, _invariant.default)((0, _lodash.conformsTo)(store, shape), "(src/helpers/utils...) injectors: Expected a valid redux store");
   }
-},429,[1,427,400],"src/helpers/utils/checkStore.js");
+},439,[1,437,400],"src/helpers/utils/checkStore.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -92676,7 +94403,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   var _default = actions;
   exports.default = _default;
-},430,[1,103,431,432],"src/components/view/Demo/module/actions.js");
+},440,[1,103,441,442],"src/components/view/Demo/module/actions.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -92694,7 +94421,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     FAILURE: "GET_REDDIT_POSTS_FAILURE"
   };
   exports.GET_REDDIT_POSTS = GET_REDDIT_POSTS;
-},431,[],"src/components/view/Demo/module/constants.js");
+},441,[],"src/components/view/Demo/module/constants.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -92713,7 +94440,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
 
   exports.fetchRedditPosts = fetchRedditPosts;
-},432,[],"src/components/view/Demo/module/side-effects.js");
+},442,[],"src/components/view/Demo/module/side-effects.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -92760,7 +94487,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _default = reducer;
   exports.default = _default;
-},433,[1,49,6,434,431],"src/components/view/Demo/module/reducer.js");
+},443,[1,49,6,444,441],"src/components/view/Demo/module/reducer.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -92776,13 +94503,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   var _default = initialState;
   exports.default = _default;
-},434,[],"src/components/view/Demo/module/state.js");
+},444,[],"src/components/view/Demo/module/state.js");
 __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   module.exports = {
   "name": "SdkApp",
   "displayName": "sdkapp"
 }
 ;
-},435,[],"app.json");
+},445,[],"app.json");
 __r(90);
 __r(0);

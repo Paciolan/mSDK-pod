@@ -3,6 +3,7 @@
 #import <React/RCTRootView.h>
 #import <React/RCTBridgeDelegate.h>
 #import <React/RCTBridge.h>
+#import <React/RCTBundleURLProvider.h>
 #import <CodePush/CodePush.h>
 
 // Let this View Controller handle getting the URL for the JS
@@ -23,9 +24,13 @@
 // Use our bundled JS for now
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
-    // NSBundle *sdkAppBundle = [NSBundle bundleForClass:SdkAppViewController.class];
-    // return [sdkAppBundle URLForResource:@"SdkApp" withExtension:@"js"];
-    return [CodePush URLForResource:@"SdkApp" withExtension:@"js"]
+    #if DEBUG
+        NSBundle *sdkAppBundle = [NSBundle bundleForClass:SdkAppViewController.class];
+        return [sdkAppBundle URLForResource:@"SdkApp" withExtension:@"js"];
+        // return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+    #else
+        return [CodePush bundleURL];
+    #endif
 }
 
 @end

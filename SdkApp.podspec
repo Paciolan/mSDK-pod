@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.source           = { git: 'https://gitlab+deploy-token-4:hKoiyi55BUhu-SZTxGs5@gitlabdev.paciolan.info/development/application/integration/mobile/msdk-pod.git', tag: s.version.to_s }
 
   s.source_files   = 'Pod/Classes/**/*.{h,m}'
-  s.resources      = 'Pod/Assets/*'
+  s.resources      = 'Pod/Assets/{SdkApp.js,assets}'
   s.platform       = :ios, '9.0'
 
   # React is split into a set of subspecs, these are the essentials
@@ -47,6 +47,9 @@ Pod::Spec.new do |s|
     # CodePush
     '../node_modules/react-native-code-push/CodePush.podspec',
   ]
+
+  # Add CodePush Key to Info.plist
+  s.prepare_command = File.read("./scripts/codepush.sh")
 
   # Ties the exact versions so host apps don't need to guess the version
   # or have a potential mismatch
