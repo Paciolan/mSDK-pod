@@ -1371,7 +1371,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   _reactNative.AppRegistry.registerComponent(_app.name, function () {
     return _App.default;
   });
-},0,[1,2,389,445],"index.js");
+},0,[1,2,389,446],"index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : {
@@ -81452,7 +81452,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _default = (0, _codePush.default)(App);
 
   exports.default = _default;
-},389,[1,53,2,390,415,422,423,433,434],"src/components/container/App/index.js");
+},389,[1,53,2,390,415,422,423,434,435],"src/components/container/App/index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   "use strict";
 
@@ -83430,7 +83430,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNativeCodePush = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "react-native-code-push"));
 
-  var deploymentKey = "uPVI6pGwsfoDuvtDsW9Nowbdtyqy4ac28013-8b5f-417a-ae75-8591e4b3b579";
+  var _reactNativeConfig = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[2], "react-native-config"));
+
+  var deploymentKey = _reactNativeConfig.default.CODE_PUSH_DEPLOYMENT_KEY;
   var codePushOptions = {
     deploymentKey: deploymentKey,
     checkFrequency: _reactNativeCodePush.default.CheckFrequency.ON_APP_RESUME,
@@ -83441,7 +83443,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _default = (0, _reactNativeCodePush.default)(codePushOptions);
 
   exports.default = _default;
-},423,[1,424],"src/helpers/services/codePush.js");
+},423,[1,424,433],"src/helpers/services/codePush.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -84736,7 +84738,7 @@ __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   "_args": [
     [
       "react-native-code-push@5.5.2",
-      "/Users/descobedo/Development/Internal/SDK/sdkapp"
+      "/Users/descobedo/Development/GitLab Runner/TPG2YL96/0/development/application/integration/mobile/msdk"
     ]
   ],
   "_from": "react-native-code-push@5.5.2",
@@ -84782,7 +84784,7 @@ __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   ],
   "_resolved": "https://registry.npmjs.org/react-native-code-push/-/react-native-code-push-5.5.2.tgz",
   "_spec": "5.5.2",
-  "_where": "/Users/descobedo/Development/Internal/SDK/sdkapp",
+  "_where": "/Users/descobedo/Development/GitLab Runner/TPG2YL96/0/development/application/integration/mobile/msdk",
   "author": {
     "name": "Microsoft Corporation"
   },
@@ -85147,6 +85149,20 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
 },432,[1,103,49,8,2,429,430],"node_modules/react-native-code-push/package-mixins.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[0], "react-native");
+
+  var _default = _reactNative.NativeModules.ReactNativeConfig || {};
+
+  exports.default = _default;
+},433,[2],"node_modules/react-native-config/index.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
   var _interopRequireWildcard = _$$_REQUIRE(_dependencyMap[1], "@babel/runtime/helpers/interopRequireWildcard");
@@ -85227,7 +85243,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _default = (0, _redux.compose)(withConnect)(QuantityPricing);
 
   exports.default = _default;
-},433,[1,392,19,20,35,38,41,53,2,70,390,404],"src/components/view/QuantityPricing/index.js");
+},434,[1,392,19,20,35,38,41,53,2,70,390,404],"src/components/view/QuantityPricing/index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -85415,7 +85431,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _default = (0, _redux.compose)(withReducer, withConnect)(Demo);
 
   exports.default = _default;
-},434,[1,392,19,20,35,38,41,53,2,70,390,404,435,440,443],"src/components/view/Demo/index.js");
+},435,[1,392,19,20,35,38,41,53,2,70,390,404,436,441,444],"src/components/view/Demo/index.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -85522,7 +85538,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
 
   exports.default = _default;
-},435,[1,392,8,19,20,35,38,41,53,390,396,436],"src/helpers/utils/injectReducer.js");
+},436,[1,392,8,19,20,35,38,41,53,390,396,437],"src/helpers/utils/injectReducer.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -85558,7 +85574,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       injectReducer: injectReducerFactory(store, true)
     };
   }
-},436,[1,400,437,438,439,417],"src/helpers/utils/reducerInjectors.js");
+},437,[1,400,438,439,440,417],"src/helpers/utils/reducerInjectors.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   /**
    * @license
@@ -92739,7 +92755,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
         root._ = _;
       }
   }).call(this);
-},437,[],"node_modules/lodash/lodash.js");
+},438,[],"node_modules/lodash/lodash.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   (function (global) {
     "use strict";
@@ -94299,7 +94315,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       });
     }
   })(typeof exports !== 'undefined' ? global : this);
-},438,[],"node_modules/harmony-reflect/reflect.js");
+},439,[],"node_modules/harmony-reflect/reflect.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -94322,7 +94338,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     };
     (0, _invariant.default)((0, _lodash.conformsTo)(store, shape), "(src/helpers/utils...) injectors: Expected a valid redux store");
   }
-},439,[1,437,400],"src/helpers/utils/checkStore.js");
+},440,[1,438,400],"src/helpers/utils/checkStore.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -94405,7 +94421,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   var _default = actions;
   exports.default = _default;
-},440,[1,103,441,442],"src/components/view/Demo/module/actions.js");
+},441,[1,103,442,443],"src/components/view/Demo/module/actions.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -94423,7 +94439,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     FAILURE: "GET_REDDIT_POSTS_FAILURE"
   };
   exports.GET_REDDIT_POSTS = GET_REDDIT_POSTS;
-},441,[],"src/components/view/Demo/module/constants.js");
+},442,[],"src/components/view/Demo/module/constants.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -94442,7 +94458,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
 
   exports.fetchRedditPosts = fetchRedditPosts;
-},442,[],"src/components/view/Demo/module/side-effects.js");
+},443,[],"src/components/view/Demo/module/side-effects.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -94489,7 +94505,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _default = reducer;
   exports.default = _default;
-},443,[1,49,6,444,441],"src/components/view/Demo/module/reducer.js");
+},444,[1,49,6,445,442],"src/components/view/Demo/module/reducer.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   Object.defineProperty(exports, "__esModule", {
     value: true
@@ -94505,13 +94521,13 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   var _default = initialState;
   exports.default = _default;
-},444,[],"src/components/view/Demo/module/state.js");
+},445,[],"src/components/view/Demo/module/state.js");
 __d(function(global, require, _aUnused, _bUnused, module, exports, _cUnused) {
   module.exports = {
   "name": "SdkApp",
   "displayName": "sdkapp"
 }
 ;
-},445,[],"app.json");
+},446,[],"app.json");
 __r(90);
 __r(0);
