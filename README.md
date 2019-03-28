@@ -16,7 +16,7 @@ pod 'SdkApp'
 
 ## Author
 
-Daniel Escobedo, descobedo@paciolan.com
+Paciolan Mobile Team, pacmobile@paciolan.com
 
 ## License
 

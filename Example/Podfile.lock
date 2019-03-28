@@ -33,7 +33,7 @@ PODS:
     - React/Core
   - React/RCTText (0.57.8):
     - React/Core
-  - SdkApp (0.1.0):
+  - PaciolanSDK (0.1.0):
     - DoubleConversion (= 1.1.6)
     - Folly (= 2016.10.31.00)
     - glog (= 0.3.5)
@@ -48,7 +48,7 @@ PODS:
   - yoga (0.57.8.React)
 
 DEPENDENCIES:
-  - SdkApp (from `../`)
+  - PaciolanSDK (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -61,7 +61,7 @@ SPEC REPOS:
     - yoga
 
 EXTERNAL SOURCES:
-  SdkApp:
+  PaciolanSDK:
     :path: "../"
 
 SPEC CHECKSUMS:
@@ -70,7 +70,7 @@ SPEC CHECKSUMS:
   Folly: fa458a15230e6bee654f3e2b25f6be60f0b61bf3
   glog: d4d3ed695a9089e790f0cfc7dbcc3bb57f8b11a6
   React: adbac0757ce35e92fbd447ab98c810209d27d9b0
-  SdkApp: 964276603a84999b6fc7701a85a577950b13f77d
+  PaciolanSDK: 964276603a84999b6fc7701a85a577950b13f77d
   yoga: dc7566617ace4ff6f328fa77d1b6945e883244bc
 
 PODFILE CHECKSUM: 47b332933965ea7c0c08e8ddeccdc3bf7bb2f5f8

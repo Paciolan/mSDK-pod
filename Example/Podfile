@@ -4,7 +4,7 @@ source 'https://gitlab+deploy-token-3:uKaSsz4E1Xar-icLsuY4@gitlabdev.paciolan.in
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'SdkApp_Example' do
-  pod 'SdkApp', :path => '../'
+  pod 'PaciolanSDK', :path => '../'
 
   target 'SdkApp_Tests' do
     inherit! :search_paths
