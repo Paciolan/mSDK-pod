@@ -5,13 +5,22 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <CodePush/CodePush.h>
+#import <React/RCTBridgeModule.h>
+#import <React/RCTUtils.h>
 
 // Let this View Controller handle getting the URL for the JS
-@interface PaciolanSDKViewController () <RCTBridgeDelegate>
+@interface PaciolanSDKViewController () <RCTBridgeDelegate,RCTBridgeModule>
 @end
 
 @implementation PaciolanSDKViewController
 @synthesize config;
+
++ (BOOL)requiresMainQueueSetup
+{
+    return YES;
+}
+
+RCT_EXPORT_MODULE()
 
 // Set self.view on the VC to be an RCTRootView
 - (void)loadView
@@ -40,4 +49,12 @@
     }
     return self;
 }
+
+RCT_EXPORT_METHOD(exitApp)
+{
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [RCTPresentedViewController() dismissViewControllerAnimated:false completion:nil];
+    });
+};
+
 @end
