@@ -28,6 +28,7 @@ Pod::Spec.new do |s|
   # React is split into a set of subspecs, these are the essentials
   s.dependency 'React/Core', react_native_version
   s.dependency 'React/CxxBridge', react_native_version
+  s.dependency 'React/RCTActionSheet', react_native_version
   s.dependency 'React/RCTAnimation', react_native_version
   s.dependency 'React/RCTImage', react_native_version
   s.dependency 'React/RCTLinkingIOS', react_native_version
@@ -46,6 +47,12 @@ Pod::Spec.new do |s|
   dep_podspecs = [
     # CodePush
     '../node_modules/react-native-code-push/CodePush.podspec',
+    # ReactNativeI18N
+    '../node_modules/react-native-i18n/RNI18N.podspec',
+    # ReactNativeAwesomeCardIO
+    '../node_modules/react-native-awesome-card-io/RNAwesomeCardIO.podspec',
+    # React Native SVG
+    '../node_modules/react-native-svg/RNSVG.podspec',
   ]
 
   # Ties the exact versions so host apps don't need to guess the version
