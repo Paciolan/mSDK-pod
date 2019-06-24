@@ -53,6 +53,10 @@ Pod::Spec.new do |s|
     '../node_modules/react-native-awesome-card-io/RNAwesomeCardIO.podspec',
     # React Native SVG
     '../node_modules/react-native-svg/RNSVG.podspec',
+    # React Native Flurry
+    '../node_modules/react-native-flurry-sdk/react-native-flurry-sdk.podspec',
+    # React Native Haptic Feedback
+    '../node_modules/react-native-haptic-feedback/react-native-haptic-feedback.podspec'
   ]
 
   # Ties the exact versions so host apps don't need to guess the version

@@ -14,6 +14,7 @@
 
 @implementation PaciolanSDKViewController
 @synthesize config;
+@synthesize paciolanJWT;
 
 + (BOOL)requiresMainQueueSetup
 {
@@ -42,6 +43,10 @@ RCT_EXPORT_MODULE()
     #endif
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return (UIInterfaceOrientationMaskPortrait);
+}
+
 - (id) initWithString: (NSString*) initializationConfig {
     self = [super init];
     if (self) {
@@ -49,6 +54,12 @@ RCT_EXPORT_MODULE()
     }
     return self;
 }
+
+RCT_EXPORT_METHOD(storeToken:(NSString *)token)
+{
+    paciolanJWT = token;
+};
+
 
 RCT_EXPORT_METHOD(exitApp)
 {
