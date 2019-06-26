@@ -14,7 +14,8 @@
 
 @implementation PaciolanSDKViewController
 @synthesize config;
-@synthesize paciolanJWT;
+
+static TokenCallback tokenCallback;
 
 + (BOOL)requiresMainQueueSetup
 {
@@ -29,18 +30,14 @@ RCT_EXPORT_MODULE()
     RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:@{}];
     self.view = [[RCTRootView alloc] initWithBridge:bridge
                                          moduleName:@"PaciolanSDK"
-                                  initialProperties:@{@"configString":config, @"gqlRoute":@"https://l43ijxugfbgy3bqpu4mr44lawu.appsync-api.us-west-2.amazonaws.com/graphql", @"gqlHeader":@"da2-z4is67k4f5dzdkt4brqgkobphe"}];
+                                  initialProperties:@{@"configString":config, @"gqlRoute":@"https://wej6l5gcxzf73aeoe3dt4bcxpe.appsync-api.us-west-2.amazonaws.com/graphql", @"gqlHeader":@"da2-mrtjord5wzes3dlwfshrwregde", @"analyticsIosKey":@"WCZFN67TFFKPCVBVK8FC", @"analyticsAndroidKey":@"68CPN22NGHZYDDP5YCS3"}];
 }
 
 // Use our bundled JS for now
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
-    #if DEBUG
-        NSBundle *sdkAppBundle = [NSBundle bundleForClass:PaciolanSDKViewController.class];
-        return [sdkAppBundle URLForResource:@"PaciolanSDK" withExtension:@"js"];
-    #else
-        return [CodePush bundleURL];
-    #endif
+    NSBundle *sdkAppBundle = [NSBundle bundleForClass:PaciolanSDKViewController.class];
+    return [sdkAppBundle URLForResource:@"PaciolanSDK" withExtension:@"js"];
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
@@ -55,9 +52,15 @@ RCT_EXPORT_MODULE()
     return self;
 }
 
+- (void) setTokenListener: (void(^)(NSString* token))callback
+{
+    tokenCallback = callback;
+}
 RCT_EXPORT_METHOD(storeToken:(NSString *)token)
 {
-    paciolanJWT = token;
+    if (tokenCallback) {
+        tokenCallback(token);
+    }
 };
 
 

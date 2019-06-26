@@ -2,7 +2,9 @@
 
 @interface PaciolanSDKViewController : UIViewController
 
-@property (strong, nonatomic) NSString *config;
-@property (strong, nonatomic) NSString *paciolanJWT;
+typedef void (^TokenCallback)(NSString* token);
+
+@property (strong, nonatomic) NSString* config;
 - (id) initWithString: (NSString*) initializationConfig;
+- (void)setTokenListener: (TokenCallback) finishBlock;
 @end
