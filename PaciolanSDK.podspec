@@ -12,7 +12,7 @@ paciolansdk_version = pkg_version.call('../')
 react_native_version = pkg_version.call('../node_modules/react-native')
 
 # Flurry version
-flurry_sdk_version = pkg_version.call('../node_modules/react-native-flurry-sdk')
+flurry_sdk_version = '9.3.1'
 
 Pod::Spec.new do |s|
   s.name             = 'PaciolanSDK'
