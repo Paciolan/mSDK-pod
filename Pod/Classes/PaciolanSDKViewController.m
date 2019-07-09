@@ -35,9 +35,9 @@ RCT_EXPORT_MODULE()
 
 // Use our bundled JS for now
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
-{
-    NSBundle *sdkAppBundle = [NSBundle bundleForClass:PaciolanSDKViewController.class];
-    return [sdkAppBundle URLForResource:@"PaciolanSDK" withExtension:@"js"];
+{  
+    [CodePush overrideAppVersion: @"1"]; // if the major version changes we up this so that codepush no longer affects previous builds that dont have the latest 
+    return [CodePush bundleURLForResource: @"PaciolanSDK" withExtension:@"js"];
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
