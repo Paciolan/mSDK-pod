@@ -14,7 +14,7 @@ To install, simply add the following lines to your Podfile:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
-source 'https://gitlab+deploy-token-3:uKaSsz4E1Xar-icLsuY4@gitlabdev.paciolan.info/development/application/integration/mobile/msdk-specs.git'
+source 'https://github.com/Paciolan/mSDK-specs'
 ```
 
 - in the target(s) you want accessing the files
