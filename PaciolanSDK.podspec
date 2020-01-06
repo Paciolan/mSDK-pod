@@ -11,9 +11,6 @@ paciolansdk_version = pkg_version.call('../')
 # Use the same RN version that the JS tools use
 react_native_version = pkg_version.call('../node_modules/react-native')
 
-# Flurry version
-flurry_sdk_version = '9.3.1'
-
 Pod::Spec.new do |s|
   s.name             = 'PaciolanSDK'
   s.version          = paciolansdk_version
@@ -38,11 +35,6 @@ Pod::Spec.new do |s|
   s.dependency 'React/RCTNetwork', react_native_version
   s.dependency 'React/RCTText', react_native_version
 
-
-  s.dependency 'Flurry-iOS-SDK/FlurrySDK', flurry_sdk_version
-  s.dependency 'Flurry-iOS-SDK/FlurryMessaging', flurry_sdk_version
-  s.dependency 'Flurry-iOS-SDK/FlurryConfig', flurry_sdk_version
-
   # React's Dependencies
   s.dependency 'yoga', "#{react_native_version}.React"
   react_podspecs = [
@@ -61,8 +53,6 @@ Pod::Spec.new do |s|
     '../node_modules/react-native-awesome-card-io/RNAwesomeCardIO.podspec',
     # React Native SVG
     '../node_modules/react-native-svg/RNSVG.podspec',
-    # React Native Flurry
-    '../node_modules/react-native-flurry-sdk/react-native-flurry-sdk.podspec',
     # React Native Haptic Feedback
     '../node_modules/react-native-haptic-feedback/react-native-haptic-feedback.podspec'
   ]
