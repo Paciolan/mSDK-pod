@@ -16,10 +16,10 @@ Pod::Spec.new do |s|
   s.version          = paciolansdk_version
   s.summary          = 'Pod Component for Paciolan Mobile SDK'
   s.description      = 'This pod allows us to install the Paciolan react native SDK ViewController into an iOS app.'
-  s.homepage         = 'https://gitlabdev.paciolan.info/development/application/integration/mobile/msdk-pod.git'
+  s.homepage         = 'https://github.com/Paciolan/mSDK-pod'
   s.license          = { type: 'No License' }
   s.author           = { 'Paciolan Mobile Team' => 'pacmobile@paciolan.com' }
-  s.source           = { git: 'https://gitlab+deploy-token-4:hKoiyi55BUhu-SZTxGs5@gitlabdev.paciolan.info/development/application/integration/mobile/msdk-pod.git', tag: s.version.to_s }
+  s.source           = { git: 'https://github.com/Paciolan/mSDK-pod', tag: s.version.to_s }
 
   s.source_files   = 'Pod/Classes/**/*.{h,m}'
   s.resources      = 'Pod/Assets/{PaciolanSDK.js,assets}'
