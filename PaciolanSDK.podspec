@@ -23,6 +23,7 @@ Pod::Spec.new do |s|
 
   s.source_files   = 'Pod/Classes/**/*.{h,m}'
   s.resources      = 'Pod/Assets/{PaciolanSDK.js,assets}'
+  s.ios.resource_bundles = { 'PaciolanSDK' => ['Pod/Assets/{PaciolanSDK.js,assets}'] }
   s.platform       = :ios, '9.0'
 
   # React is split into a set of subspecs, these are the essentials
