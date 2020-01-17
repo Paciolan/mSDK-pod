@@ -30,14 +30,17 @@ RCT_EXPORT_MODULE()
     RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:@{}];
     self.view = [[RCTRootView alloc] initWithBridge:bridge
                                          moduleName:@"PaciolanSDK"
-                                  initialProperties:@{@"configString":config, @"gqlRoute":@"https://wej6l5gcxzf73aeoe3dt4bcxpe.appsync-api.us-west-2.amazonaws.com/graphql", @"gqlHeader":@"da2-mrtjord5wzes3dlwfshrwregde", @"analyticsIosKey":@"WCZFN67TFFKPCVBVK8FC", @"analyticsAndroidKey":@"68CPN22NGHZYDDP5YCS3"}];
+                                  initialProperties:@{@"configString":config, @"gqlRoute":@"https://wej6l5gcxzf73aeoe3dt4bcxpe.appsync-api.us-west-2.amazonaws.com/graphql", @"gqlHeader":@"da2-mrtjord5wzes3dlwfshrwregde"}];
 }
 
 // Use our bundled JS for now
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
-{  
-    [CodePush overrideAppVersion: @"2"]; // if the major version changes we up this so that codepush no longer affects previous builds that dont have the latest 
-    return [CodePush bundleURLForResource: @"PaciolanSDK" withExtension:@"js"];
+{
+    [CodePush overrideAppVersion: @"2"]; // if the major version changes we up this so that codepush no longer affects previous builds that dont have the latest
+    return [CodePush bundleURLForResource:@"PaciolanSDK"
+                                    withExtension:@"js"
+                                     subdirectory:nil
+                                           bundle:[NSBundle bundleForClass:PaciolanSDKViewController.class]];
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
