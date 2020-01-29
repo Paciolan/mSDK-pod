@@ -55,7 +55,9 @@ Pod::Spec.new do |s|
     # React Native SVG
     '../node_modules/react-native-svg/RNSVG.podspec',
     # React Native Haptic Feedback
-    '../node_modules/react-native-haptic-feedback/react-native-haptic-feedback.podspec'
+    '../node_modules/react-native-haptic-feedback/react-native-haptic-feedback.podspec',
+    # @Paciolan/react-native-payments
+    '../node_modules/@paciolan/react-native-payments/lib/ios/ReactNativePayments.podspec'
   ]
 
   # Ties the exact versions so host apps don't need to guess the version

@@ -36,7 +36,7 @@ RCT_EXPORT_MODULE()
 // Use our bundled JS for now
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
-    [CodePush overrideAppVersion: @"2"]; // if the major version changes we up this so that codepush no longer affects previous builds that dont have the latest
+    [CodePush overrideAppVersion: @"3"]; // if the major version changes we up this so that codepush no longer affects previous builds that dont have the latest
     return [CodePush bundleURLForResource:@"PaciolanSDK"
                                     withExtension:@"js"
                                      subdirectory:nil
