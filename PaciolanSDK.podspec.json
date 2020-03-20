@@ -11,7 +11,7 @@
     "Paciolan Mobile Team": "pacmobile@paciolan.com"
   },
   "source": {
-    "git": "https://github.com/Paciolan/mSDK-pod",
+    "git": "https://github.com/Paciolan/mSDK-pod.git",
     "tag": "3.1.0"
   },
   "source_files": "Pod/Classes/**/*.{h,m}",
@@ -64,7 +64,7 @@
       "0.3.5"
     ],
     "CodePush": [
-      "5.6.0"
+      "5.7.0"
     ],
     "RNI18n": [
       "2.0.14"
@@ -73,13 +73,13 @@
       "0.8.2"
     ],
     "RNSVG": [
-      "9.4.0"
+      "9.13.6"
     ],
-    "react-native-haptic-feedback": [
-      "1.8.0"
+    "RNReactNativeHapticFeedback": [
+      "1.9.0"
     ],
     "ReactNativePayments": [
-      "0.7.13"
+      "0.7.17"
     ],
     "react-native-webview": [
       "5.8.0"

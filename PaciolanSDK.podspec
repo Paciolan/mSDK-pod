@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/Paciolan/mSDK-pod'
   s.license          = { type: 'No License' }
   s.author           = { 'Paciolan Mobile Team' => 'pacmobile@paciolan.com' }
-  s.source           = { git: 'https://github.com/Paciolan/mSDK-pod', tag: s.version.to_s }
+  s.source           = { git: 'https://github.com/Paciolan/mSDK-pod.git', tag: s.version.to_s }
 
   s.source_files   = 'Pod/Classes/**/*.{h,m}'
   s.resources      = 'Pod/Assets/{PaciolanSDK.js,assets}'
@@ -55,7 +55,7 @@ Pod::Spec.new do |s|
     # React Native SVG
     '../node_modules/react-native-svg/RNSVG.podspec',
     # React Native Haptic Feedback
-    '../node_modules/react-native-haptic-feedback/react-native-haptic-feedback.podspec',
+    '../node_modules/react-native-haptic-feedback/RNReactNativeHapticFeedback.podspec',
     # @Paciolan/react-native-payments
     '../node_modules/@paciolan/react-native-payments/lib/ios/ReactNativePayments.podspec',
     # React Native Webview
