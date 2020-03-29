@@ -59,7 +59,11 @@ Pod::Spec.new do |s|
     # @Paciolan/react-native-payments
     '../node_modules/@paciolan/react-native-payments/lib/ios/ReactNativePayments.podspec',
     # React Native Webview
-    '../node_modules/react-native-webview/react-native-webview.podspec'
+    '../node_modules/react-native-webview/react-native-webview.podspec',
+    # React Native Device Info
+    '../node_modules/react-native-device-info/RNDeviceInfo.podspec',
+    # React Native AsyncStorage
+    '../node_modules/@react-native-community/async-storage/RNCAsyncStorage.podspec'
   ]
 
   # Ties the exact versions so host apps don't need to guess the version
