@@ -46,18 +46,10 @@ Pod::Spec.new do |s|
 
   # Native Dependencies
   dep_podspecs = [
-    # CodePush
-    '../node_modules/react-native-code-push/CodePush.podspec',
     # ReactNativeI18N
     '../node_modules/react-native-i18n/RNI18N.podspec',
-    # ReactNativeAwesomeCardIO
-    '../node_modules/react-native-awesome-card-io/RNAwesomeCardIO.podspec',
-    # React Native SVG
-    '../node_modules/react-native-svg/RNSVG.podspec',
     # React Native Haptic Feedback
     '../node_modules/react-native-haptic-feedback/RNReactNativeHapticFeedback.podspec',
-    # @Paciolan/react-native-payments
-    '../node_modules/@paciolan/react-native-payments/lib/ios/ReactNativePayments.podspec',
     # React Native Webview
     '../node_modules/react-native-webview/react-native-webview.podspec',
     # React Native Device Info

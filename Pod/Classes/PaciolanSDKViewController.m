@@ -4,7 +4,6 @@
 #import <React/RCTBridgeDelegate.h>
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
-#import <CodePush/CodePush.h>
 #import <React/RCTBridgeModule.h>
 #import <React/RCTUtils.h>
 
@@ -27,20 +26,40 @@ RCT_EXPORT_MODULE()
 // Set self.view on the VC to be an RCTRootView
 - (void)loadView
 {
+    BOOL integration = false;
+    @try {
+        NSMutableDictionary *dict=[NSJSONSerialization JSONObjectWithData:[config dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
+        NSString *integrationTest=dict[@"integrationTest"];
+        integration= [integrationTest boolValue];
+        NSLog(integration ? @"Yes" : @"No");
+    }
+    @catch(NSException *exception) {
+        NSLog(@"Something went wrong.");
+    }
+    NSString *gqlRoute;
+    NSString *gqlHeader;
+
+    if(integration) {
+         NSLog(@"INTEGRATION API");
+        gqlRoute = @"https://egd3ryhucbbftdugafv7r7nszi.appsync-api.us-west-2.amazonaws.com/graphql";
+        gqlHeader = @"da2-p7thxxmm6ber3iewkxo5dykege";
+    } else {
+        NSLog(@"PROD API");
+        gqlRoute=@"https://wej6l5gcxzf73aeoe3dt4bcxpe.appsync-api.us-west-2.amazonaws.com/graphql";
+        gqlHeader=@"da2-mrtjord5wzes3dlwfshrwregde";
+    }
+
     RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:@{}];
     self.view = [[RCTRootView alloc] initWithBridge:bridge
                                          moduleName:@"PaciolanSDK"
-                                  initialProperties:@{@"configString":config, @"gqlRoute":@"https://wej6l5gcxzf73aeoe3dt4bcxpe.appsync-api.us-west-2.amazonaws.com/graphql", @"gqlHeader":@"da2-mrtjord5wzes3dlwfshrwregde"}];
+                                  initialProperties:@{@"configString":config, @"gqlRoute": gqlRoute, @"gqlHeader":gqlHeader}];
 }
 
 // Use our bundled JS for now
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
-    [CodePush overrideAppVersion: @"3"]; // if the major version changes we up this so that codepush no longer affects previous builds that dont have the latest
-    return [CodePush bundleURLForResource:@"PaciolanSDK"
-                                    withExtension:@"js"
-                                     subdirectory:nil
-                                           bundle:[NSBundle bundleForClass:PaciolanSDKViewController.class]];
+    NSBundle *sdkAppBundle = [NSBundle bundleForClass:PaciolanSDKViewController.class];
+    return [sdkAppBundle URLForResource:@"PaciolanSDK" withExtension:@"js"];
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {
