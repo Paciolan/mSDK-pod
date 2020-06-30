@@ -4,6 +4,7 @@
 #import <React/RCTBridgeDelegate.h>
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
+#import <CodePush/CodePush.h>
 #import <React/RCTBridgeModule.h>
 #import <React/RCTUtils.h>
 
@@ -41,8 +42,8 @@ RCT_EXPORT_MODULE()
 
     if(integration) {
          NSLog(@"INTEGRATION API");
-        gqlRoute = @"https://egd3ryhucbbftdugafv7r7nszi.appsync-api.us-west-2.amazonaws.com/graphql";
-        gqlHeader = @"da2-p7thxxmm6ber3iewkxo5dykege";
+        gqlRoute = @"https://ndrafa5x3zdqjkj6onfvbtyupu.appsync-api.us-west-2.amazonaws.com/graphql";
+        gqlHeader = @"da2-kxhalilplngzxmt6yanlckdoia";
     } else {
         NSLog(@"PROD API");
         gqlRoute=@"https://wej6l5gcxzf73aeoe3dt4bcxpe.appsync-api.us-west-2.amazonaws.com/graphql";
@@ -58,8 +59,11 @@ RCT_EXPORT_MODULE()
 // Use our bundled JS for now
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
-    NSBundle *sdkAppBundle = [NSBundle bundleForClass:PaciolanSDKViewController.class];
-    return [sdkAppBundle URLForResource:@"PaciolanSDK" withExtension:@"js"];
+    [CodePush overrideAppVersion: @"4.0"]; // if the major version changes we up this so that codepush no longer affects previous builds that dont have the latest
+    return [CodePush bundleURLForResource:@"PaciolanSDK"
+                                    withExtension:@"js"
+                                     subdirectory:nil
+                                           bundle:[NSBundle bundleForClass:PaciolanSDKViewController.class]];
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations {

@@ -1,15 +1,11 @@
 require 'json'
 
-# Returns the version number for a package.json file
 pkg_version = lambda do |dir_from_root = '', version = 'version'|
   path = File.join(__dir__, dir_from_root, 'package.json')
   JSON.parse(File.read(path))[version]
 end
 
-# Let the main package.json decide the version number for the pod
 paciolansdk_version = pkg_version.call('../')
-# Use the same RN version that the JS tools use
-react_native_version = pkg_version.call('../node_modules/react-native')
 
 Pod::Spec.new do |s|
   s.name             = 'PaciolanSDK'
@@ -26,41 +22,58 @@ Pod::Spec.new do |s|
   s.ios.resource_bundles = { 'PaciolanSDK' => ['Pod/Assets/{PaciolanSDK.js,assets}'] }
   s.platform       = :ios, '9.0'
 
-  # React is split into a set of subspecs, these are the essentials
-  s.dependency 'React/Core', react_native_version
-  s.dependency 'React/CxxBridge', react_native_version
-  s.dependency 'React/RCTActionSheet', react_native_version
-  s.dependency 'React/RCTAnimation', react_native_version
-  s.dependency 'React/RCTImage', react_native_version
-  s.dependency 'React/RCTLinkingIOS', react_native_version
-  s.dependency 'React/RCTNetwork', react_native_version
-  s.dependency 'React/RCTText', react_native_version
+  core = [
+    '../node_modules/react-native/React.podspec',
+    '../node_modules/react-native/React-Core.podspec',
+    '../node_modules/react-native/React/CoreModules/React-CoreModules.podspec',
+    '../node_modules/react-native/Libraries/ActionSheetIOS/React-RCTActionSheet.podspec',
+    '../node_modules/react-native/Libraries/NativeAnimation/React-RCTAnimation.podspec',
+    '../node_modules/react-native/Libraries/Blob/React-RCTBlob.podspec',
+    '../node_modules/react-native/Libraries/Image/React-RCTImage.podspec',
+    '../node_modules/react-native/Libraries/LinkingIOS/React-RCTLinking.podspec',
+    '../node_modules/react-native/Libraries/Network/React-RCTNetwork.podspec',
+    '../node_modules/react-native/Libraries/Settings/React-RCTSettings.podspec',
+    '../node_modules/react-native/Libraries/Text/React-RCTText.podspec',
+    '../node_modules/react-native/Libraries/Vibration/React-RCTVibration.podspec'
+  ]
 
-  # React's Dependencies
-  s.dependency 'yoga', "#{react_native_version}.React"
-  react_podspecs = [
+  core_dependencies = [
+    '../node_modules/react-native/ReactCommon/cxxreact/React-cxxreact.podspec',
+    '../node_modules/react-native/ReactCommon/jsi/React-jsi.podspec',
+    '../node_modules/react-native/ReactCommon/jsiexecutor/React-jsiexecutor.podspec',
+    '../node_modules/react-native/Libraries/FBReactNativeSpec/FBReactNativeSpec.podspec',
+    '../node_modules/react-native/Libraries/TypeSafety/RCTTypeSafety.podspec',
+    '../node_modules/react-native/ReactCommon/ReactCommon.podspec',
+    '../node_modules/react-native/ReactCommon/yoga/Yoga.podspec',
+  ]
+
+  core_dependencies_dependencies = [
+    '../node_modules/react-native/Libraries/RCTRequired/RCTRequired.podspec',
+    '../node_modules/react-native/Libraries/FBLazyVector/FBLazyVector.podspec',
+    '../node_modules/react-native/ReactCommon/jsinspector/React-jsinspector.podspec',
+  ]
+
+  third_party_dependencies = [
     '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec',
     '../node_modules/react-native/third-party-podspecs/Folly.podspec',
     '../node_modules/react-native/third-party-podspecs/glog.podspec'
   ]
 
-  # Native Dependencies
-  dep_podspecs = [
-    # ReactNativeI18N
+  msdk_dependencies = [
+    '../node_modules/react-native-code-push/CodePush.podspec',
     '../node_modules/react-native-i18n/RNI18N.podspec',
-    # React Native Haptic Feedback
+    '../node_modules/react-native-awesome-card-io/RNAwesomeCardIO.podspec',
+    '../node_modules/react-native-svg/RNSVG.podspec',
     '../node_modules/react-native-haptic-feedback/RNReactNativeHapticFeedback.podspec',
-    # React Native Webview
+    '../node_modules/@paciolan/react-native-payments/lib/ios/ReactNativePayments.podspec',
     '../node_modules/react-native-webview/react-native-webview.podspec',
-    # React Native Device Info
     '../node_modules/react-native-device-info/RNDeviceInfo.podspec',
-    # React Native AsyncStorage
-    '../node_modules/@react-native-community/async-storage/RNCAsyncStorage.podspec'
+    '../node_modules/@react-native-community/async-storage/RNCAsyncStorage.podspec',
+    '../node_modules/react-native-wallet/react-native-wallet.podspec'
   ]
 
-  # Ties the exact versions so host apps don't need to guess the version
-  # or have a potential mismatch
-  podspecs = react_podspecs + dep_podspecs
+  podspecs = core + core_dependencies + core_dependencies_dependencies + third_party_dependencies + msdk_dependencies
+
   podspecs.each do |podspec_path|
     spec = Pod::Specification.from_file podspec_path
     s.dependency spec.name, "#{spec.version}"

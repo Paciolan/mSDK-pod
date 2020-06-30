@@ -1,12 +1,97 @@
 platform :ios, '9.0'
 
-source 'https://gitlab+deploy-token-3:uKaSsz4E1Xar-icLsuY4@gitlabdev.paciolan.info/development/application/integration/mobile/msdk-specs.git'
-source 'https://github.com/CocoaPods/Specs.git'
+node_modules_path = '../../node_modules'
 
-target 'SdkApp_Example' do
+react_path = File.join(node_modules_path, 'react-native')
+react_libraries_path = File.join(react_path, 'Libraries')
+react_common_path = File.join(react_path, 'ReactCommon')
+
+# core
+coremodules_path = File.join(react_path, 'React/CoreModules')
+rctactionsheet_path = File.join(react_libraries_path, 'ActionSheetIOS')
+rctanimation_path = File.join(react_libraries_path, 'NativeAnimation')
+rctblob_path = File.join(react_libraries_path, 'Blob')
+rctimage_path = File.join(react_libraries_path, 'Image')
+rctlinking_path = File.join(react_libraries_path, 'LinkingIOS')
+rctnetwork_path = File.join(react_libraries_path, 'Network')
+rctsettings_path = File.join(react_libraries_path, 'Settings')
+rcttext_path = File.join(react_libraries_path, 'Text')
+rctvibration_path = File.join(react_libraries_path, 'Vibration')
+
+# core dependencies
+cxxreact_path = File.join(react_common_path, 'cxxreact')
+jsi_path = File.join(react_common_path, 'jsi')
+jsiexecutor_path = File.join(react_common_path, 'jsiexecutor')
+fbreactnativespec_path = File.join(react_libraries_path, 'FBReactNativeSpec')
+rcttypesafety_path = File.join(react_libraries_path, 'TypeSafety')
+yoga_path = File.join(react_path, 'ReactCommon/yoga')
+
+# core dependencies' dependencies
+rctrequired_path = File.join(react_libraries_path, 'RCTRequired')
+fblazyvector_path = File.join(react_libraries_path, 'FBLazyVector')
+jsinspector_path = File.join(react_common_path, 'jsinspector')
+
+# third party dependencies
+double_conversion_spec_path = File.join(react_path, 'third-party-podspecs/DoubleConversion.podspec')
+folly_spec_path = File.join(react_path, 'third-party-podspecs/Folly.podspec')
+glog_spec_path = File.join(react_path, 'third-party-podspecs/glog.podspec')
+
+# msdk dependencies
+codepush_path = File.join(node_modules_path, 'react-native-code-push/CodePush.podspec')
+rni18n_path = File.join(node_modules_path, 'react-native-i18n/RNI18N.podspec')
+rnawesomecardio_path = File.join(node_modules_path, 'react-native-awesome-card-io/RNAwesomeCardIO.podspec')
+rnsvg_path = File.join(node_modules_path, 'react-native-svg/RNSVG.podspec')
+rnreactnativehapticfeedback_path = File.join(node_modules_path, 'react-native-haptic-feedback/RNReactNativeHapticFeedback.podspec')
+reactnativepayments_path = File.join(node_modules_path, '@paciolan/react-native-payments/lib/ios/ReactNativePayments.podspec')
+react_native_webview_path = File.join(node_modules_path, 'react-native-webview/react-native-webview.podspec')
+rndeviceinfo_path = File.join(node_modules_path, 'react-native-device-info/RNDeviceInfo.podspec')
+rncasyncstorage_path = File.join(node_modules_path, '@react-native-community/async-storage/RNCAsyncStorage.podspec')
+
+target 'PaciolanSDK_Example' do
   pod 'PaciolanSDK', :path => '../'
 
-  target 'SdkApp_Tests' do
-    inherit! :search_paths
-  end
+  # core
+  pod 'React', path: react_path
+  pod 'React-Core', :path => react_path
+  pod 'React-CoreModules', :path => coremodules_path
+  pod 'React-RCTActionSheet', :path => rctactionsheet_path
+  pod 'React-RCTAnimation', :path => rctanimation_path
+  pod 'React-RCTBlob', :path => rctblob_path
+  pod 'React-RCTImage', :path => rctimage_path
+  pod 'React-RCTLinking', :path => rctlinking_path
+  pod 'React-RCTNetwork', :path => rctnetwork_path
+  pod 'React-RCTSettings', :path => rctsettings_path
+  pod 'React-RCTText', :path => rcttext_path
+  pod 'React-RCTVibration', :path => rctvibration_path
+
+  # core dependencies
+  pod 'React-cxxreact', path: cxxreact_path
+  pod 'React-jsi', path: jsi_path
+  pod 'React-jsiexecutor', path: jsiexecutor_path
+  pod 'FBReactNativeSpec', path: fbreactnativespec_path
+  pod 'RCTTypeSafety', path: rcttypesafety_path
+  pod 'ReactCommon/turbomodule/core', path: react_common_path
+  pod 'Yoga', path: yoga_path
+
+  # core dependencies' dependencies
+  pod 'RCTRequired', path: rctrequired_path
+  pod 'FBLazyVector', path: fblazyvector_path
+  pod 'React-jsinspector', path: jsinspector_path
+
+  # third party dependencies
+  pod 'DoubleConversion', podspec: double_conversion_spec_path
+  pod 'Folly', podspec: folly_spec_path
+  pod 'glog', podspec: glog_spec_path
+
+  # msdk dependencies
+  pod 'CodePush', podspec: codepush_path
+  pod 'RNI18n', podspec: rni18n_path
+  pod 'RNAwesomeCardIO', podspec: rnawesomecardio_path
+  pod 'RNSVG', podspec: rnsvg_path
+  pod 'RNReactNativeHapticFeedback', podspec: rnreactnativehapticfeedback_path
+  pod 'ReactNativePayments', podspec: reactnativepayments_path
+  pod 'react-native-webview', podspec: react_native_webview_path
+  pod 'RNDeviceInfo', podspec: rndeviceinfo_path
+  pod 'RNCAsyncStorage', podspec: rncasyncstorage_path
+
 end
