@@ -13,6 +13,7 @@
   "PRICE_LEVEL3": "B03",
   "NO_TICKETS": "B04",
   "NOT_ON_SALE": "B05",
+  "COMP_TICKETS": "B06",
   "USERNAME": "pacmobiledev@gmail.com",
   "PSWD": "Paciolan01"
 }
