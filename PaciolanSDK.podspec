@@ -51,6 +51,7 @@ Pod::Spec.new do |s|
     '../node_modules/react-native/Libraries/RCTRequired/RCTRequired.podspec',
     '../node_modules/react-native/Libraries/FBLazyVector/FBLazyVector.podspec',
     '../node_modules/react-native/ReactCommon/jsinspector/React-jsinspector.podspec',
+    '../node_modules/react-native/ReactCommon/callinvoker/React-callinvoker.podspec',
   ]
 
   third_party_dependencies = [

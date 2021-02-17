@@ -42,8 +42,8 @@ RCT_EXPORT_MODULE()
 
     if(integration) {
          NSLog(@"INTEGRATION API");
-        gqlRoute = @"https://ndrafa5x3zdqjkj6onfvbtyupu.appsync-api.us-west-2.amazonaws.com/graphql";
-        gqlHeader = @"da2-kxhalilplngzxmt6yanlckdoia";
+        gqlRoute = @"https://zbeiclwpbbel5gk5mweyr6xdoy.appsync-api.us-west-2.amazonaws.com/graphql";
+        gqlHeader = @"da2-kf5luvu2ffcanmyum6clpz2wtm";
     } else {
         NSLog(@"PROD API");
         gqlRoute=@"https://wej6l5gcxzf73aeoe3dt4bcxpe.appsync-api.us-west-2.amazonaws.com/graphql";
@@ -59,7 +59,7 @@ RCT_EXPORT_MODULE()
 // Use our bundled JS for now
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
-    [CodePush overrideAppVersion: @"4.0"]; // if the major version changes we up this so that codepush no longer affects previous builds that dont have the latest
+    [CodePush overrideAppVersion: @"4.1"]; // if the major version changes we up this so that codepush no longer affects previous builds that dont have the latest
     return [CodePush bundleURLForResource:@"PaciolanSDK"
                                     withExtension:@"js"
                                      subdirectory:nil
