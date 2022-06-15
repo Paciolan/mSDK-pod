@@ -33,6 +33,11 @@ RCT_EXPORT_MODULE()
         NSString *integrationTest=dict[@"integrationTest"];
         integration= [integrationTest boolValue];
         NSLog(integration ? @"Yes" : @"No");
+
+        // avoid webview cache
+        [[NSURLCache sharedURLCache] removeAllCachedResponses];
+        [[NSURLCache sharedURLCache] setDiskCapacity:0];
+        [[NSURLCache sharedURLCache] setMemoryCapacity:0];
     }
     @catch(NSException *exception) {
         NSLog(@"Something went wrong.");
