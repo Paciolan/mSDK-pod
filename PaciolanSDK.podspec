@@ -78,6 +78,6 @@ Pod::Spec.new do |s|
 
   podspecs.each do |podspec_path|
     spec = Pod::Specification.from_file podspec_path
-    s.dependency spec.name, "#{spec.version}"
+      s.dependency spec.name, "#{spec.version}"
   end
 end
