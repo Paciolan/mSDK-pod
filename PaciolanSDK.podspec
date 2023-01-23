@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.source_files   = 'Pod/Classes/**/*.{h,m}'
   s.resources      = 'Pod/Assets/{PaciolanSDK.js,assets}'
   s.ios.resource_bundles = { 'PaciolanSDK' => ['Pod/Assets/{PaciolanSDK.js,assets}'] }
-  s.platform       = :ios, '11.0'
+  s.platform       = :ios, '9.0'
 
   core = [
     '../node_modules/react-native/React.podspec',
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
     '../node_modules/react-native/ReactCommon/cxxreact/React-cxxreact.podspec',
     '../node_modules/react-native/ReactCommon/jsi/React-jsi.podspec',
     '../node_modules/react-native/ReactCommon/jsiexecutor/React-jsiexecutor.podspec',
-    '../node_modules/react-native/React/FBReactNativeSpec/FBReactNativeSpec.podspec',
+    '../node_modules/react-native/Libraries/FBReactNativeSpec/FBReactNativeSpec.podspec',
     '../node_modules/react-native/Libraries/TypeSafety/RCTTypeSafety.podspec',
     '../node_modules/react-native/ReactCommon/ReactCommon.podspec',
     '../node_modules/react-native/ReactCommon/yoga/Yoga.podspec',
@@ -52,16 +52,12 @@ Pod::Spec.new do |s|
     '../node_modules/react-native/Libraries/FBLazyVector/FBLazyVector.podspec',
     '../node_modules/react-native/ReactCommon/jsinspector/React-jsinspector.podspec',
     '../node_modules/react-native/ReactCommon/callinvoker/React-callinvoker.podspec',
-    '../node_modules/react-native/ReactCommon/reactperflogger/React-perflogger.podspec',
-    '../node_modules/react-native/ReactCommon/runtimeexecutor/React-runtimeexecutor.podspec',
-    '../node_modules/react-native/ReactCommon/logger/React-logger.podspec',
   ]
 
   third_party_dependencies = [
     '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec',
-    '../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec',
-    '../node_modules/react-native/third-party-podspecs/glog.podspec',
-    '../node_modules/react-native/third-party-podspecs/boost.podspec'
+    '../node_modules/react-native/third-party-podspecs/Folly.podspec',
+    '../node_modules/react-native/third-party-podspecs/glog.podspec'
   ]
 
   msdk_dependencies = [
@@ -73,7 +69,7 @@ Pod::Spec.new do |s|
     '../node_modules/@paciolan/react-native-payments/lib/ios/ReactNativePayments.podspec',
     '../node_modules/react-native-webview/react-native-webview.podspec',
     '../node_modules/react-native-device-info/RNDeviceInfo.podspec',
-    '../node_modules/@react-native-async-storage/async-storage/RNCAsyncStorage.podspec',
+    '../node_modules/@react-native-community/async-storage/RNCAsyncStorage.podspec',
     '../node_modules/react-native-wallet/react-native-wallet.podspec',
     '../node_modules/react-native-select-contact/react-native-select-contact.podspec'
   ]
@@ -81,12 +77,7 @@ Pod::Spec.new do |s|
   podspecs = core + core_dependencies + core_dependencies_dependencies + third_party_dependencies + msdk_dependencies
 
   podspecs.each do |podspec_path|
-    # p podspec_path
     spec = Pod::Specification.from_file podspec_path
-    if spec.name === "Yoga"
-      s.dependency spec.name, "1.14.1"
-    else
       s.dependency spec.name, "#{spec.version}"
-    end
   end
 end
