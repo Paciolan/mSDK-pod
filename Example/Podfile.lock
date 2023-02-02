@@ -19,7 +19,7 @@ PODS:
   - glog (0.3.5)
   - JWT (3.0.0-beta.14):
     - Base64 (~> 1.1.2)
-  - PaciolanSDK (4.3.1):
+  - PaciolanSDK (4.4.0):
     - boost (= 1.76.0)
     - CodePush (= 6.2.0)
     - DoubleConversion (= 1.1.6)
@@ -38,6 +38,7 @@ PODS:
     - React-jsiexecutor (= 0.67.4)
     - React-jsinspector (= 0.67.4)
     - React-logger (= 0.67.4)
+    - react-native-encrypted-storage (= 4.0.3)
     - react-native-select-contact (= 1.6.3)
     - react-native-wallet (= 1.0.8)
     - react-native-webview (= 9.4.0)
@@ -55,7 +56,6 @@ PODS:
     - ReactCommon (= 0.67.4)
     - ReactNativePayments (= 0.7.17)
     - RNAwesomeCardIO (= 0.8.2)
-    - RNCAsyncStorage (= 1.17.10)
     - RNDeviceInfo (= 5.5.6)
     - RNI18n (= 2.0.14)
     - RNReactNativeHapticFeedback (= 1.9.0)
@@ -259,6 +259,8 @@ PODS:
   - React-jsinspector (0.67.4)
   - React-logger (0.67.4):
     - glog
+  - react-native-encrypted-storage (4.0.3):
+    - React-Core
   - react-native-select-contact (1.6.3):
     - React-Core
   - react-native-wallet (1.0.8):
@@ -363,8 +365,6 @@ PODS:
     - React
   - RNAwesomeCardIO (0.8.2):
     - React
-  - RNCAsyncStorage (1.17.10):
-    - React-Core
   - RNDeviceInfo (5.5.6):
     - React
   - RNI18n (2.0.14):
@@ -396,6 +396,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../../node_modules/react-native/ReactCommon/logger/React-logger.podspec`)
+  - react-native-encrypted-storage (from `../../node_modules/react-native-encrypted-storage/react-native-encrypted-storage.podspec`)
   - react-native-select-contact (from `../../node_modules/react-native-select-contact/react-native-select-contact.podspec`)
   - react-native-wallet (from `../../node_modules/react-native-wallet/react-native-wallet.podspec`)
   - react-native-webview (from `../../node_modules/react-native-webview/react-native-webview.podspec`)
@@ -413,7 +414,6 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../../node_modules/react-native/ReactCommon`)
   - "ReactNativePayments (from `../../node_modules/@paciolan/react-native-payments/lib/ios/ReactNativePayments.podspec`)"
   - RNAwesomeCardIO (from `../../node_modules/react-native-awesome-card-io/RNAwesomeCardIO.podspec`)
-  - "RNCAsyncStorage (from `../../node_modules/@react-native-async-storage/async-storage/RNCAsyncStorage.podspec`)"
   - RNDeviceInfo (from `../../node_modules/react-native-device-info/RNDeviceInfo.podspec`)
   - RNI18n (from `../../node_modules/react-native-i18n/RNI18N.podspec`)
   - RNReactNativeHapticFeedback (from `../../node_modules/react-native-haptic-feedback/RNReactNativeHapticFeedback.podspec`)
@@ -466,6 +466,8 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../../node_modules/react-native/ReactCommon/logger/React-logger.podspec"
+  react-native-encrypted-storage:
+    :podspec: "../../node_modules/react-native-encrypted-storage/react-native-encrypted-storage.podspec"
   react-native-select-contact:
     :podspec: "../../node_modules/react-native-select-contact/react-native-select-contact.podspec"
   react-native-wallet:
@@ -500,8 +502,6 @@ EXTERNAL SOURCES:
     :podspec: "../../node_modules/@paciolan/react-native-payments/lib/ios/ReactNativePayments.podspec"
   RNAwesomeCardIO:
     :podspec: "../../node_modules/react-native-awesome-card-io/RNAwesomeCardIO.podspec"
-  RNCAsyncStorage:
-    :podspec: "../../node_modules/@react-native-async-storage/async-storage/RNCAsyncStorage.podspec"
   RNDeviceInfo:
     :podspec: "../../node_modules/react-native-device-info/RNDeviceInfo.podspec"
   RNI18n:
@@ -523,7 +523,7 @@ SPEC CHECKSUMS:
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 85ecdd10ee8d8ec362ef519a6a45ff9aa27b2e85
   JWT: ef71dfb03e1f842081e64dc42eef0e164f35d251
-  PaciolanSDK: 5698d86ff41d428b64654e3afe882f3274563478
+  PaciolanSDK: 530dac59c7804473865ca027203d17b47400f358
   RCT-Folly: 803a9cfd78114b2ec0f140cfa6fa2a6bafb2d685
   RCTRequired: 0aa6c1c27e1d65920df35ceea5341a5fe76bdb79
   RCTTypeSafety: d76a59d00632891e11ed7522dba3fd1a995e573a
@@ -536,6 +536,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: cbdf37cebdc4f5d8b3d0bf5ccaa6147fd9de9f3d
   React-jsinspector: f4775ea9118cbe1f72b834f0f842baa7a99508d8
   React-logger: a1f028f6d8639a3f364ef80419e5e862e1115250
+  react-native-encrypted-storage: 9220c8a959b2abe4231466bb504158a572168729
   react-native-select-contact: 7ed15ace95f78491ed058932c3556a63a54f3133
   react-native-wallet: 7b6f613dfd7dcda04e93657a4ac433338b03826c
   react-native-webview: 0e2881d2e3e72ad52a82445c1a116c43205fd471
@@ -553,7 +554,6 @@ SPEC CHECKSUMS:
   ReactCommon: 07d0c460b9ba9af3eaf1b8f5abe7daaad28c9c4e
   ReactNativePayments: 6576614a98e9a1baf8a3180cf9081ab4698b0ff2
   RNAwesomeCardIO: b1311580f7bd82031c2e5e8829c33f2bf8456085
-  RNCAsyncStorage: 73b194e58ded504eee17b9a3c125651e2507ddde
   RNDeviceInfo: c3ea4a4d4547740c548cdd1e5a78f9b04e524688
   RNI18n: ae012568644105311254f877f32e4157e063217f
   RNReactNativeHapticFeedback: 2566b468cc8d0e7bb2f84b23adc0f4614594d071
@@ -561,6 +561,6 @@ SPEC CHECKSUMS:
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
   Yoga: d6b6a80659aa3e91aaba01d0012e7edcbedcbecd
 
-PODFILE CHECKSUM: c6f640e2640d42f4d9aa70375a91bf9b9db417bb
+PODFILE CHECKSUM: 6ef7ff9eaa10858245bfc894dece2024fbf451b6
 
 COCOAPODS: 1.11.3

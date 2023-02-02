@@ -141,8 +141,8 @@
     "RNDeviceInfo": [
       "5.5.6"
     ],
-    "RNCAsyncStorage": [
-      "1.17.10"
+    "react-native-encrypted-storage": [
+      "4.0.3"
     ],
     "react-native-wallet": [
       "1.0.8"

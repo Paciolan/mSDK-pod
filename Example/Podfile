@@ -53,7 +53,7 @@ rnreactnativehapticfeedback_path = File.join(node_modules_path, 'react-native-ha
 reactnativepayments_path = File.join(node_modules_path, '@paciolan/react-native-payments/lib/ios/ReactNativePayments.podspec')
 react_native_webview_path = File.join(node_modules_path, 'react-native-webview/react-native-webview.podspec')
 rndeviceinfo_path = File.join(node_modules_path, 'react-native-device-info/RNDeviceInfo.podspec')
-rncasyncstorage_path = File.join(node_modules_path, '@react-native-async-storage/async-storage/RNCAsyncStorage.podspec')
+rncasyncstorage_path = File.join(node_modules_path, 'react-native-encrypted-storage/react-native-encrypted-storage.podspec')
 react_native_wallet_path = File.join(node_modules_path, 'react-native-wallet/react-native-wallet.podspec')
 react_native_select_contact_path = File.join(node_modules_path, 'react-native-select-contact/react-native-select-contact.podspec')
 
@@ -107,7 +107,7 @@ target 'PaciolanSDK_Example' do
   pod 'ReactNativePayments', podspec: reactnativepayments_path
   pod 'react-native-webview', podspec: react_native_webview_path
   pod 'RNDeviceInfo', podspec: rndeviceinfo_path
-  pod 'RNCAsyncStorage', podspec: rncasyncstorage_path
+  pod 'react-native-encrypted-storage', podspec: rncasyncstorage_path
   pod 'react-native-wallet', podspec: react_native_wallet_path
   pod 'react-native-select-contact', podspec: react_native_select_contact_path
 

@@ -73,7 +73,7 @@ Pod::Spec.new do |s|
     '../node_modules/@paciolan/react-native-payments/lib/ios/ReactNativePayments.podspec',
     '../node_modules/react-native-webview/react-native-webview.podspec',
     '../node_modules/react-native-device-info/RNDeviceInfo.podspec',
-    '../node_modules/@react-native-async-storage/async-storage/RNCAsyncStorage.podspec',
+    '../node_modules/react-native-encrypted-storage/react-native-encrypted-storage.podspec',
     '../node_modules/react-native-wallet/react-native-wallet.podspec',
     '../node_modules/react-native-select-contact/react-native-select-contact.podspec'
   ]
