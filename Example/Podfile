@@ -5,6 +5,7 @@ node_modules_path = '../../node_modules'
 react_path = File.join(node_modules_path, 'react-native')
 react_libraries_path = File.join(react_path, 'Libraries')
 react_common_path = File.join(react_path, 'ReactCommon')
+react_new_libraries_path = File.join(react_path, 'React')
 
 # core
 coremodules_path = File.join(react_path, 'React/CoreModules')
@@ -22,9 +23,14 @@ rctvibration_path = File.join(react_libraries_path, 'Vibration')
 cxxreact_path = File.join(react_common_path, 'cxxreact')
 jsi_path = File.join(react_common_path, 'jsi')
 jsiexecutor_path = File.join(react_common_path, 'jsiexecutor')
-fbreactnativespec_path = File.join(react_libraries_path, 'FBReactNativeSpec')
+fbreactnativespec_path = File.join(react_new_libraries_path, 'FBReactNativeSpec')
 rcttypesafety_path = File.join(react_libraries_path, 'TypeSafety')
 yoga_path = File.join(react_path, 'ReactCommon/yoga')
+react_perflogger_path = File.join(react_common_path, 'reactperflogger/React-perflogger.podspec')
+react_callinvoker_path = File.join(react_common_path, 'callinvoker/React-callinvoker.podspec')
+react_runtimeexecutor_path = File.join(react_common_path, 'runtimeexecutor/React-runtimeexecutor.podspec')
+react_logger_path = File.join(react_common_path, 'logger/React-logger.podspec')
+
 
 # core dependencies' dependencies
 rctrequired_path = File.join(react_libraries_path, 'RCTRequired')
@@ -33,8 +39,10 @@ jsinspector_path = File.join(react_common_path, 'jsinspector')
 
 # third party dependencies
 double_conversion_spec_path = File.join(react_path, 'third-party-podspecs/DoubleConversion.podspec')
-folly_spec_path = File.join(react_path, 'third-party-podspecs/Folly.podspec')
+folly_spec_path = File.join(react_path, 'third-party-podspecs/RCT-Folly.podspec')
 glog_spec_path = File.join(react_path, 'third-party-podspecs/glog.podspec')
+boost_path = File.join(react_path, 'third-party-podspecs/boost.podspec')
+# libevent_path = File.join(react_path, 'third-party-podspecs/libevent.podspec')
 
 # msdk dependencies
 codepush_path = File.join(node_modules_path, 'react-native-code-push/CodePush.podspec')
@@ -45,7 +53,9 @@ rnreactnativehapticfeedback_path = File.join(node_modules_path, 'react-native-ha
 reactnativepayments_path = File.join(node_modules_path, '@paciolan/react-native-payments/lib/ios/ReactNativePayments.podspec')
 react_native_webview_path = File.join(node_modules_path, 'react-native-webview/react-native-webview.podspec')
 rndeviceinfo_path = File.join(node_modules_path, 'react-native-device-info/RNDeviceInfo.podspec')
-rncasyncstorage_path = File.join(node_modules_path, '@react-native-community/async-storage/RNCAsyncStorage.podspec')
+rncasyncstorage_path = File.join(node_modules_path, 'react-native-encrypted-storage/react-native-encrypted-storage.podspec')
+react_native_wallet_path = File.join(node_modules_path, 'react-native-wallet/react-native-wallet.podspec')
+react_native_select_contact_path = File.join(node_modules_path, 'react-native-select-contact/react-native-select-contact.podspec')
 
 target 'PaciolanSDK_Example' do
   pod 'PaciolanSDK', :path => '../'
@@ -72,6 +82,10 @@ target 'PaciolanSDK_Example' do
   pod 'RCTTypeSafety', path: rcttypesafety_path
   pod 'ReactCommon/turbomodule/core', path: react_common_path
   pod 'Yoga', path: yoga_path
+  pod 'React-perflogger', path: react_perflogger_path
+  pod 'React-callinvoker', path: react_callinvoker_path
+  pod 'React-runtimeexecutor', path: react_runtimeexecutor_path
+  pod 'React-logger', path: react_logger_path
 
   # core dependencies' dependencies
   pod 'RCTRequired', path: rctrequired_path
@@ -80,8 +94,9 @@ target 'PaciolanSDK_Example' do
 
   # third party dependencies
   pod 'DoubleConversion', podspec: double_conversion_spec_path
-  pod 'Folly', podspec: folly_spec_path
+  pod 'RCT-Folly', podspec: folly_spec_path
   pod 'glog', podspec: glog_spec_path
+  pod 'boost', podspec: boost_path
 
   # msdk dependencies
   pod 'CodePush', podspec: codepush_path
@@ -92,6 +107,8 @@ target 'PaciolanSDK_Example' do
   pod 'ReactNativePayments', podspec: reactnativepayments_path
   pod 'react-native-webview', podspec: react_native_webview_path
   pod 'RNDeviceInfo', podspec: rndeviceinfo_path
-  pod 'RNCAsyncStorage', podspec: rncasyncstorage_path
+  pod 'react-native-encrypted-storage', podspec: rncasyncstorage_path
+  pod 'react-native-wallet', podspec: react_native_wallet_path
+  pod 'react-native-select-contact', podspec: react_native_select_contact_path
 
 end
