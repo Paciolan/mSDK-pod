@@ -1,0 +1,19 @@
+{
+  "SERVICE_URL": "https://s2b6cfokcja6jmxrqsgkj7icz4.appsync-api.us-west-2.amazonaws.com/graphql",
+  "SERVICE_KEY": "da2-mj4xddjpsvbfvhqqamad55jdjm",
+  "ORG_ID": "996",
+  "SDK_KEY": "test1",
+  "CHANNEL_CODE": "pac-sdk",
+  "DISTRIBUTOR_CODE": "IOWA",
+  "POLICY_CODE": "PACSDK",
+  "SEASON_CODE": "B14",
+  "ITEM_CODE": "B02",
+  "PRICE_LEVEL1": "B01",
+  "PRICE_LEVEL2": "B02",
+  "PRICE_LEVEL3": "B03",
+  "NO_TICKETS": "B04",
+  "NOT_ON_SALE": "B05",
+  "COMP_TICKETS": "B06",
+  "USERNAME": "pacmobiledev@gmail.com",
+  "PSWD": "Paciolan01"
+}
