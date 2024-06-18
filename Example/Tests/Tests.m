@@ -2,8 +2,8 @@
 //  PaciolanSDKTests.m
 //  PaciolanSDKTests
 //
-//  Created by Daniel Escobedo on 05/04/2020.
-//  Copyright (c) 2020 Daniel Escobedo. All rights reserved.
+//  Created by 55355294 on 02/12/2024.
+//  Copyright (c) 2024 55355294. All rights reserved.
 //
 
 @import XCTest;
@@ -32,3 +32,4 @@
 }
 
 @end
+
